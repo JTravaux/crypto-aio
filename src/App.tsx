@@ -328,7 +328,7 @@ function App() {
                   </label>
                   <label className="group flex items-center p-6 bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm rounded-2xl border border-gray-600/50 hover:border-pink-500/50 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-pink-500/20">
                     <input type="checkbox" className="w-5 h-5 text-pink-500 bg-gray-700 border-gray-600 rounded focus:ring-pink-500 focus:ring-2" />
-                    <span className="ml-4 text-gray-300 font-medium group-hover:text-pink-400 transition-colors duration-300">Social Media & Marketing</span>
+                    <span className="ml-4 text-gray-300 font-medium group-hover:text-pink-400 transition-colors duration-300">Social Media &amp; Marketing</span>
                   </label>
                 </div>
               </div>

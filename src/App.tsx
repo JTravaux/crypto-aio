@@ -850,7 +850,7 @@ function App() {
               </span>
             </h2>
             <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Get a <span className="text-cyan-400 font-semibold">confidential quote</span> for your crypto project.
+              Get a <span className="text-cyan-400 font-semibold">confidential quote</span> for your crypto project.&nbsp;
               <span className="text-green-400 font-semibold">No personal information required</span>.
             </p>
 

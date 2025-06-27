@@ -1,23 +1,18 @@
-import './App.css'
 import {
+  Accordion,
+  AccordionItem,
+  Button,
+  Card,
+  CardBody,
+  CardHeader,
+  Link,
   Navbar,
   NavbarBrand,
   NavbarContent,
-  NavbarItem,
-  Link,
-  Button,
-  Card,
-  CardHeader,
-  CardBody,
-  Textarea,
-  Select,
-  SelectItem,
-  Checkbox,
-  RadioGroup,
-  Radio,
-  Accordion,
-  AccordionItem
-} from '@heroui/react'
+  NavbarItem
+} from '@heroui/react';
+import './App.css';
+import ContactForm from './ContactForm';
 
 function App() {
   return (
@@ -179,7 +174,7 @@ function App() {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-black text-cyan-400 mb-2">50+</div>
+              <div className="text-3xl md:text-4xl font-black text-cyan-400 mb-2">25+</div>
               <div className="text-gray-400 text-sm uppercase tracking-wider">Projects Delivered</div>
             </div>
             <div className="text-center">
@@ -215,13 +210,13 @@ function App() {
           <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-12">
             {/* Writing Services */}
             <Card className="group relative bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/70 transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-cyan-500/25 p-8">
-              <CardHeader className="pb-0">
-                <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/25">
+              <CardHeader className="flex items-center mb-6 pb-0">
+                <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl flex items-center justify-center flex-shrink-0">
                   <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                   </svg>
                 </div>
-                <h3 className="text-3xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">Content Creation</h3>
+                <h3 className="ml-6 text-3xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">Content Solutions</h3>
               </CardHeader>
               <CardBody>
                 <p className="text-gray-300 mb-6 text-lg leading-relaxed">Professional whitepapers, announcements, and social media content crafted for the crypto space with technical precision.</p>
@@ -248,13 +243,13 @@ function App() {
 
             {/* Development Services */}
             <Card className="group relative bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-sm border border-gray-700/50 hover:border-purple-500/70 transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/25 p-8">
-              <CardHeader className="pb-0">
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-500/25">
+              <CardHeader className="flex items-center mb-6 pb-0">
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-3xl flex items-center justify-center flex-shrink-0">
                   <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                   </svg>
                 </div>
-                <h3 className="text-3xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300">Smart Contracts & dApp Development</h3>
+                <h3 className="ml-6 text-3xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300">Development Solutions</h3>
               </CardHeader>
               <CardBody>
                 <p className="text-gray-300 mb-6 text-lg leading-relaxed">Full-stack decentralized applications with cutting-edge Web3 integration, smart contract backends, and seamless user experiences built for the future of finance.</p>
@@ -281,13 +276,13 @@ function App() {
 
             {/* Privacy & Security */}
             <Card className="group relative bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-sm border border-gray-700/50 hover:border-green-500/70 transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-green-500/25 p-8">
-              <CardHeader className="pb-0">
-                <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-600 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-green-500/25">
+              <CardHeader className="flex items-center mb-6 pb-0">
+                <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-600 rounded-3xl flex items-center justify-center flex-shrink-0">
                   <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                   </svg>
                 </div>
-                <h3 className="text-3xl font-bold text-white group-hover:text-green-400 transition-colors duration-300">Privacy Solutions</h3>
+                <h3 className="ml-6 text-3xl font-bold text-white group-hover:text-green-400 transition-colors duration-300">Privacy Solutions</h3>
               </CardHeader>
               <CardBody>
                 <p className="text-gray-300 mb-6 text-lg leading-relaxed">End-to-end encrypted communications and privacy-preserving technologies for your most sensitive crypto projects.</p>
@@ -339,7 +334,7 @@ function App() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-2">Proven Track Record</h3>
-                  <p className="text-gray-400 text-lg">Successfully delivered 50+ crypto projects with high client satisfaction</p>
+                  <p className="text-gray-400 text-lg">Successfully delivered 25+ crypto projects with high client satisfaction</p>
                 </div>
               </div>
 
@@ -371,8 +366,8 @@ function App() {
             <div className="grid grid-cols-2 gap-6">
               <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50">
                 <CardBody className="text-center p-8">
-                  <div className="text-4xl font-black text-green-400 mb-2">$500K+</div>
-                  <div className="text-gray-400 text-sm uppercase tracking-wider">Total Value Secured</div>
+                  <div className="text-4xl font-black text-green-400 mb-2">$250k+</div>
+                  <div className="text-gray-400 text-sm uppercase tracking-wider">Total Value Delivered</div>
                 </CardBody>
               </Card>
               <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50">
@@ -490,7 +485,7 @@ function App() {
               <CardBody className="p-8 text-center">
                 <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L3 3m6.878 6.878L21 21" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">Anonymous Consulting</h3>
@@ -893,176 +888,7 @@ function App() {
 
           {/* Contact Form */}
           <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl border border-gray-700/50 p-10 shadow-2xl">
-            <form className="space-y-6">
-              {/* Service Type */}
-              <div>
-                <label className="block text-lg font-semibold text-gray-300 mb-4">
-                  Service Required *
-                </label>
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                  <label className="group cursor-pointer">
-                    <Card className="bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/20 group-hover:border-cyan-500/70">
-                      <CardBody className="p-6 flex items-center min-h-[120px]">
-                        <Checkbox className="mr-4" color="primary" name="services" value="content-writing" />
-                        <span className="text-gray-300 font-medium group-hover:text-cyan-400 transition-colors duration-300 text-base">Content Writing (Whitepapers, Announcements)</span>
-                      </CardBody>
-                    </Card>
-                  </label>
-                  <label className="group cursor-pointer">
-                    <Card className="bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-500/20 group-hover:border-purple-500/70">
-                      <CardBody className="p-6 flex items-center min-h-[120px]">
-                        <Checkbox className="mr-4" color="secondary" name="services" value="smart-contracts" />
-                        <span className="text-gray-300 font-medium group-hover:text-purple-400 transition-colors duration-300 text-base">Smart Contract Development</span>
-                      </CardBody>
-                    </Card>
-                  </label>
-                  <label className="group cursor-pointer">
-                    <Card className="bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-green-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-green-500/20 group-hover:border-green-500/70">
-                      <CardBody className="p-6 flex items-center min-h-[120px]">
-                        <Checkbox className="mr-4" color="success" name="services" value="dapp-development" />
-                        <span className="text-gray-300 font-medium group-hover:text-green-400 transition-colors duration-300 text-base">DApp Development</span>
-                      </CardBody>
-                    </Card>
-                  </label>
-                  <label className="group cursor-pointer">
-                    <Card className="bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-pink-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-pink-500/20 group-hover:border-pink-500/70">
-                      <CardBody className="p-6 flex items-center min-h-[120px]">
-                        <Checkbox className="mr-4" color="warning" name="services" value="social-media" />
-                        <span className="text-gray-300 font-medium group-hover:text-pink-400 transition-colors duration-300 text-base">Social Media & Marketing</span>
-                      </CardBody>
-                    </Card>
-                  </label>
-                </div>
-              </div>
-
-              {/* Project Description */}
-              <div>
-                <label className="block text-lg font-semibold text-gray-300 mb-4">
-                  Project Description *
-                </label>
-                <Textarea
-                  placeholder="Describe your project requirements, timeline, and any specific needs. Be as detailed as possible to receive an accurate quote."
-                  rows={5}
-                  className="w-full"
-                  classNames={{
-                    base: "w-full",
-                    input: "bg-transparent text-gray-300 text-base leading-relaxed placeholder:text-gray-500",
-                    inputWrapper: "bg-gray-700/50 border border-gray-600 hover:border-cyan-500 focus-within:border-cyan-500 min-h-[140px] transition-colors duration-300 shadow-none"
-                  }}
-                />
-              </div>
-
-              {/* Budget Range */}
-              <div>
-                <label className="block text-lg font-semibold text-gray-300 mb-4">
-                  Estimated Budget Range
-                </label>
-                <Select
-                  placeholder="Select budget range (optional)"
-                  className="w-full"
-                  classNames={{
-                    trigger: "bg-gray-700/50 border-gray-600 text-gray-300 hover:bg-gray-600/50 min-h-[48px] transition-colors duration-300",
-                    label: "text-gray-300 font-medium",
-                    value: "text-gray-300",
-                    popoverContent: "bg-gray-800 border-gray-600",
-                  }}
-                >
-                  <SelectItem key="under-2k" className="text-gray-300">Under $2,000</SelectItem>
-                  <SelectItem key="2k-5k" className="text-gray-300">$2,000 - $5,000</SelectItem>
-                  <SelectItem key="5k-15k" className="text-gray-300">$5,000 - $15,000</SelectItem>
-                  <SelectItem key="15k-30k" className="text-gray-300">$15,000 - $30,000</SelectItem>
-                  <SelectItem key="over-30k" className="text-gray-300">Over $30,000</SelectItem>
-                  <SelectItem key="discuss" className="text-gray-300">Prefer to discuss</SelectItem>
-                </Select>
-              </div>
-
-              {/* Timeline */}
-              <div>
-                <label className="block text-lg font-semibold text-gray-300 mb-4">
-                  Project Timeline
-                </label>
-                <Select
-                  placeholder="Select timeline (optional)"
-                  className="w-full"
-                  classNames={{
-                    trigger: "bg-gray-700/50 border-gray-600 text-gray-300 hover:bg-gray-600/50 min-h-[48px] transition-colors duration-300",
-                    label: "text-gray-300 font-medium",
-                    value: "text-gray-300",
-                    popoverContent: "bg-gray-800 border-gray-600",
-                  }}
-                >
-                  <SelectItem key="urgent" className="text-gray-300">Urgent (1-2 weeks)</SelectItem>
-                  <SelectItem key="fast" className="text-gray-300">Fast (2-4 weeks)</SelectItem>
-                  <SelectItem key="standard" className="text-gray-300">Standard (1-2 months)</SelectItem>
-                  <SelectItem key="flexible" className="text-gray-300">Flexible (2+ months)</SelectItem>
-                </Select>
-              </div>
-
-              {/* Anonymous Contact Method */}
-              <div>
-                <label className="block text-lg font-semibold text-gray-300 mb-4">
-                  Preferred Anonymous Contact Method *
-                </label>
-                <RadioGroup className="space-y-4 mb-4">
-                  <Radio value="telegram" className="text-gray-300">
-                    Telegram (provide username)
-                  </Radio>
-                  <Radio value="signal" className="text-gray-300">
-                    Signal (provide number)
-                  </Radio>
-                  <Radio value="protonmail" className="text-gray-300">
-                    ProtonMail (provide email)
-                  </Radio>
-                  <Radio value="discord" className="text-gray-300">
-                    Discord (provide username)
-                  </Radio>
-                </RadioGroup>
-                <Textarea
-                  placeholder="Enter your contact details (username/email/number)"
-                  rows={2}
-                  className="w-full"
-                  classNames={{
-                    base: "w-full",
-                    input: "bg-transparent text-gray-300 text-base placeholder:text-gray-500",
-                    inputWrapper: "bg-gray-700/50 border border-gray-600 hover:border-cyan-500 focus-within:border-cyan-500 min-h-[60px] transition-colors duration-300 shadow-none"
-                  }}
-                />
-              </div>
-
-              {/* Privacy Notice */}
-              <Card className="bg-gray-700/30 border border-gray-600">
-                <CardBody className="p-6">
-                  <div className="flex items-start space-x-3">
-                    <svg className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                    <div>
-                      <h4 className="text-lg font-semibold text-white mb-2">Privacy Guarantee</h4>
-                      <p className="text-gray-300 text-sm leading-relaxed">
-                        Your submission is encrypted end-to-end and automatically deleted after 24 hours.
-                        We never store personal information, IP addresses, or metadata. All project discussions
-                        happen through your chosen anonymous channel with AES-256 encryption.
-                      </p>
-                    </div>
-                  </div>
-                </CardBody>
-              </Card>
-
-              {/* Submit Button */}
-              <div className="text-center">
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="px-12 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg"
-                  radius="lg"
-                >
-                  Submit Anonymous Quote Request
-                </Button>
-                <p className="text-gray-400 text-sm mt-4">
-                  Response within 2-4 hours • All communications encrypted
-                </p>
-              </div>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </section>

@@ -153,22 +153,14 @@ function App() {
             we deliver comprehensive crypto services with <span className="text-green-400 font-semibold">absolute discretion</span>.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <Button
-              size="lg"
-              className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25"
-              radius="lg"
+          {/* Hero Section Buttons */}
+          <div className="flex justify-center my-10">
+            <a
+              href="#request-quote"
+              className="inline-block w-64 px-8 py-4 text-lg font-semibold rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg hover:from-cyan-600 hover:to-purple-700 transition-all transform hover:scale-105 text-center"
             >
               Get Started Now
-            </Button>
-            <Button
-              size="lg"
-              variant="bordered"
-              className="px-10 py-5 border-2 border-gray-600 text-gray-300 font-bold hover:border-cyan-400 hover:text-cyan-400 hover:shadow-lg hover:shadow-cyan-400/25 transition-all duration-300 backdrop-blur-sm bg-gray-800/20"
-              radius="lg"
-            >
-              View Portfolio
-            </Button>
+            </a>
           </div>
 
           {/* Stats */}
@@ -853,7 +845,7 @@ function App() {
       <section id="contact" className="relative z-10 px-6 py-32 bg-gradient-to-b from-transparent to-gray-900/50">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-black mb-8">
+            <h2 id="request-quote" className="text-5xl md:text-6xl font-black mb-8">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                 REQUEST ANONYMOUS QUOTE
               </span>
@@ -887,7 +879,7 @@ function App() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl border border-gray-700/50 p-10 shadow-2xl">
+          <div id="contact-form" className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl border border-gray-700/50 p-10 shadow-2xl">
             <ContactForm />
           </div>
         </div>

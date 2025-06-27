@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { addToast } from '@heroui/toast';
-import { Card, CardBody, Checkbox, Textarea, Select, SelectItem, RadioGroup, Radio, Button } from '@heroui/react';
+import { Card, CardBody, Checkbox, Textarea, Select, SelectItem, RadioGroup, Radio, Button, Input } from '@heroui/react';
 
 const ContactForm = () => {
   const formRef = useRef(null);
@@ -60,12 +60,12 @@ const ContactForm = () => {
         <label className="block text-lg font-semibold text-gray-300 mb-4">
           Service Required *
         </label>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-4">
           <label className="group cursor-pointer">
             <Card className="bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/20 group-hover:border-cyan-500/70">
-              <CardBody className="p-6 flex flex-row items-center gap-2 h-24">
+              <CardBody className="p-1 flex flex-row items-center gap-2 h-16">
                 <Checkbox
-                  className="mr-4"
+                className="ml-2"
                   color="primary"
                   name="services"
                   value="content-writing"
@@ -82,9 +82,9 @@ const ContactForm = () => {
           </label>
           <label className="group cursor-pointer">
             <Card className="bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-500/20 group-hover:border-purple-500/70">
-              <CardBody className="p-6 flex flex-row items-center gap-2 h-24">
+              <CardBody className="p-1 flex flex-row items-center gap-2 h-16">
                 <Checkbox
-                  className="mr-4"
+                className="ml-2"
                   color="secondary"
                   name="services"
                   value="smart-contracts"
@@ -101,9 +101,9 @@ const ContactForm = () => {
           </label>
           <label className="group cursor-pointer">
             <Card className="bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-green-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-green-500/20 group-hover:border-green-500/70">
-              <CardBody className="p-6 flex flex-row items-center gap-2 h-24">
+              <CardBody className="p-1 flex flex-row items-center gap-2 h-16">
                 <Checkbox
-                  className="mr-4"
+                className="ml-2"
                   color="success"
                   name="services"
                   value="dapp-development"
@@ -118,25 +118,7 @@ const ContactForm = () => {
               </CardBody>
             </Card>
           </label>
-          <label className="group cursor-pointer">
-            <Card className="bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-pink-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-pink-500/20 group-hover:border-pink-500/70">
-              <CardBody className="p-6 flex flex-row items-center gap-2 h-24">
-                <Checkbox
-                  className="mr-4"
-                  color="warning"
-                  name="services"
-                  value="social-media"
-                  checked={services.includes('social-media')}
-                  onChange={e => {
-                    setServices(s => e.target.checked ? [...s, 'social-media'] : s.filter(v => v !== 'social-media'));
-                  }}
-                />
-                <div className="flex-1">
-                  <span className="text-gray-300 font-medium group-hover:text-pink-400 transition-colors duration-300 text-base">Marketing Solutions</span>
-                </div>
-              </CardBody>
-            </Card>
-          </label>
+
         </div>
       </div>
       {/* Project Description */}
@@ -161,7 +143,7 @@ const ContactForm = () => {
       {/* Budget Range */}
       <div>
         <label className="block text-lg font-semibold text-gray-300 mb-4">
-          Estimated Budget Range
+          Estimated Budget Range *
         </label>
         <Select
           name="budget_range"
@@ -171,7 +153,7 @@ const ContactForm = () => {
             const value = String(Array.from(keys)[0] || '');
             setBudgetRange(value);
           }}
-          placeholder="Select budget range (optional)"
+          placeholder="Select budget range"
           className="w-full"
           classNames={{
             trigger: "bg-gray-700/50 border-gray-600 text-gray-300 hover:bg-gray-600/50 min-h-[48px] transition-colors duration-300",
@@ -191,7 +173,7 @@ const ContactForm = () => {
       {/* Timeline */}
       <div>
         <label className="block text-lg font-semibold text-gray-300 mb-4">
-          Project Timeline
+          Project Timeline *
         </label>
         <Select
           name="timeline"
@@ -201,7 +183,7 @@ const ContactForm = () => {
             const value = String(Array.from(keys)[0] || '');
             setTimeline(value);
           }}
-          placeholder="Select timeline (optional)"
+          placeholder="Select timeline"
           className="w-full"
           classNames={{
             trigger: "bg-gray-700/50 border-gray-600 text-gray-300 hover:bg-gray-600/50 min-h-[48px] transition-colors duration-300",
@@ -232,17 +214,16 @@ const ContactForm = () => {
           <Radio value="protonmail" className="text-gray-300">ProtonMail (provide email)</Radio>
           <Radio value="discord" className="text-gray-300">Discord (provide username)</Radio>
         </RadioGroup>
-        <Textarea
+        <Input
           name="contact_details"
           value={contactDetails}
           onChange={e => setContactDetails(e.target.value)}
           placeholder="Enter your contact details (username/email/number)"
-          rows={2}
           className="w-full"
           classNames={{
             base: "w-full",
             input: "bg-transparent text-gray-300 text-base placeholder:text-gray-500",
-            inputWrapper: "bg-gray-700/50 border border-gray-600 hover:border-cyan-500 focus-within:border-cyan-500 min-h-[60px] transition-colors duration-300 shadow-none"
+            inputWrapper: "bg-gray-700/50 border border-gray-600 hover:border-cyan-500 focus-within:border-cyan-500 transition-colors duration-300 shadow-none"
           }}
         />
       </div>

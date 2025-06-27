@@ -195,7 +195,7 @@ function App() {
               </span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-50              Professional crypto solutions delivered with high-quality security and technical excellence
+              We deliver professional crypto solutions with high-quality security and technical excellence.
             </p>
           </div>
 
@@ -312,7 +312,7 @@ function App() {
               </span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Trusted by crypto projects and startups for our expertise, discretion, and results
+              We are trusted by crypto projects and startups for our expertise, discretion, and proven results.
             </p>
           </div>
 

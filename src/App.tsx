@@ -166,7 +166,7 @@ function App() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-black text-cyan-400 mb-2">25+</div>
-              <div className="text-gray-400 text-sm uppercase tracking-wider">Projects Delivered</div>
+              <div className="text-gray-400 text-sm uppercase tracking-wider">End-to-end Projects</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-black text-purple-400 mb-2">24/7</div>
@@ -325,7 +325,7 @@ function App() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-2">Proven Track Record</h3>
-                  <p className="text-gray-400 text-lg">Successfully delivered 25+ crypto projects with high client satisfaction</p>
+                  <p className="text-gray-400 text-lg">Over 25 full crypto projects shipped — and plenty more supported with content, consulting, or partial builds.</p>
                 </div>
               </div>
 
@@ -357,14 +357,14 @@ function App() {
             <div className="grid grid-cols-2 gap-6">
               <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50">
                 <CardBody className="text-center p-8">
-                  <div className="text-4xl font-black text-green-400 mb-2">$250k+</div>
-                  <div className="text-gray-400 text-sm uppercase tracking-wider">Total Value Delivered</div>
+                  <div className="text-4xl font-black text-green-400 mb-2">1,200+</div>
+                  <div className="text-gray-400 text-sm uppercase tracking-wider">Hours Saved for Clients</div>
                 </CardBody>
               </Card>
               <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50">
                 <CardBody className="text-center p-8">
-                  <div className="text-4xl font-black text-purple-400 mb-2">25+</div>
-                  <div className="text-gray-400 text-sm uppercase tracking-wider">Satisfied Clients</div>
+                  <div className="text-4xl font-black text-purple-400 mb-2">$50M+</div>
+                  <div className="text-gray-400 text-sm uppercase tracking-wider">TVL Across Projects</div>
                 </CardBody>
               </Card>
               <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50">
@@ -375,8 +375,8 @@ function App() {
               </Card>
               <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50">
                 <CardBody className="text-center p-8">
-                  <div className="text-4xl font-black text-pink-400 mb-2">5+</div>
-                  <div className="text-gray-400 text-sm uppercase tracking-wider">Years Experience</div>
+                  <div className="text-4xl font-black text-pink-400 mb-2">7+</div>
+                  <div className="text-gray-400 text-sm uppercase tracking-wider">Years of Experience</div>
                 </CardBody>
               </Card>
             </div>

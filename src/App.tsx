@@ -212,7 +212,7 @@ function App() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {/* Writing Services */}
             <Card className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
               <CardHeader className="pb-0">
@@ -412,54 +412,50 @@ function App() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-4 gap-8">
-            <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
-              <CardHeader className="pb-0">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="relative">
+              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-500 via-purple-500 to-green-500"></div>
+              
+              <div className="relative flex items-start mb-12">
+                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center z-10">
                   <span className="text-2xl font-black text-white">1</span>
                 </div>
-              </CardHeader>
-              <CardBody>
-                <h3 className="text-2xl font-bold text-white mb-4">Anonymous Contact</h3>
-                <p className="text-gray-400">Reach out through your preferred encrypted channel. No personal information required.</p>
-              </CardBody>
-            </Card>
-
-            <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300">
-              <CardHeader className="pb-0">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-4">
+                <div className="ml-8">
+                  <h3 className="text-2xl font-bold text-white mb-4">Anonymous Contact</h3>
+                  <p className="text-gray-400 text-lg">Reach out through your preferred encrypted channel. No personal information required.</p>
+                </div>
+              </div>
+              
+              <div className="relative flex items-start mb-12">
+                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center z-10">
                   <span className="text-2xl font-black text-white">2</span>
                 </div>
-              </CardHeader>
-              <CardBody>
-                <h3 className="text-2xl font-bold text-white mb-4">Secure Consultation</h3>
-                <p className="text-gray-400">Discuss your project requirements through end-to-end encrypted communications.</p>
-              </CardBody>
-            </Card>
-
-            <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 hover:border-green-500/50 transition-all duration-300">
-              <CardHeader className="pb-0">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mb-4">
+                <div className="ml-8">
+                  <h3 className="text-2xl font-bold text-white mb-4">Secure Consultation</h3>
+                  <p className="text-gray-400 text-lg">Discuss your project requirements through end-to-end encrypted communications.</p>
+                </div>
+              </div>
+              
+              <div className="relative flex items-start mb-12">
+                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center z-10">
                   <span className="text-2xl font-black text-white">3</span>
                 </div>
-              </CardHeader>
-              <CardBody>
-                <h3 className="text-2xl font-bold text-white mb-4">Development & Delivery</h3>
-                <p className="text-gray-400">Expert execution with regular encrypted updates and milestone deliveries.</p>
-              </CardBody>
-            </Card>
-
-            <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 hover:border-yellow-500/50 transition-all duration-300">
-              <CardHeader className="pb-0">
-                <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mb-4">
+                <div className="ml-8">
+                  <h3 className="text-2xl font-bold text-white mb-4">Development & Delivery</h3>
+                  <p className="text-gray-400 text-lg">Expert execution with regular encrypted updates and milestone deliveries.</p>
+                </div>
+              </div>
+              
+              <div className="relative flex items-start">
+                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center z-10">
                   <span className="text-2xl font-black text-white">4</span>
                 </div>
-              </CardHeader>
-              <CardBody>
-                <h3 className="text-2xl font-bold text-white mb-4">Secure Handoff</h3>
-                <p className="text-gray-400">Complete project delivery with documentation. All traces automatically purged.</p>
-              </CardBody>
-            </Card>
+                <div className="ml-8">
+                  <h3 className="text-2xl font-bold text-white mb-4">Secure Handoff</h3>
+                  <p className="text-gray-400 text-lg">Complete project delivery with documentation. All traces automatically purged.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -897,13 +893,13 @@ function App() {
 
           {/* Contact Form */}
           <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl border border-gray-700/50 p-10 shadow-2xl">
-            <form className="space-y-8">
+            <form className="space-y-6">
               {/* Service Type */}
               <div>
-                <label className="block text-lg font-semibold text-gray-300 mb-6">
+                <label className="block text-lg font-semibold text-gray-300 mb-4">
                   Service Required *
                 </label>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                   <Card className="group bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-cyan-500/50 cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/20">
                     <CardBody className="p-6 flex items-center min-h-[80px]">
                       <Checkbox className="mr-4" color="primary" />

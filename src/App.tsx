@@ -179,7 +179,7 @@ function App() {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-black text-cyan-400 mb-2">100+</div>
+              <div className="text-3xl md:text-4xl font-black text-cyan-400 mb-2">50+</div>
               <div className="text-gray-400 text-sm uppercase tracking-wider">Projects Delivered</div>
             </div>
             <div className="text-center">
@@ -208,7 +208,7 @@ function App() {
               </span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Comprehensive crypto solutions delivered with military-grade privacy and professional excellence
+              Comprehensive crypto solutions delivered with enterprise-grade security and professional excellence
             </p>
           </div>
           
@@ -363,7 +363,7 @@ function App() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-2">Uncompromising Security</h3>
-                  <p className="text-gray-400 text-lg">Zero security breaches in 5+ years of operation with military-grade protocols</p>
+                  <p className="text-gray-400 text-lg">Strong security track record with AES-256 encryption and industry-standard protocols</p>
                 </div>
               </div>
             </div>
@@ -486,7 +486,7 @@ function App() {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-green-400 transition-colors duration-300">End-to-End Encryption</h3>
-                <p className="text-gray-400 text-lg leading-relaxed">All communications secured with military-grade encryption protocols</p>
+                <p className="text-gray-400 text-lg leading-relaxed">All communications secured with AES-256 encryption and RSA-4096 key exchange</p>
               </CardBody>
             </Card>
             
@@ -542,8 +542,8 @@ function App() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white">SOC 2 Type II Certified</h3>
-                      <p className="text-gray-400">Independently audited security controls</p>
+                      <h3 className="text-xl font-bold text-white">Security-First Architecture</h3>
+                      <p className="text-gray-400">Industry-standard security controls and best practices</p>
                     </div>
                   </div>
                 </CardBody>
@@ -594,9 +594,9 @@ function App() {
                   </div>
                 </div>
               </div>
-              <h3 className="text-3xl font-bold text-white mb-4">Bank-Level Security</h3>
+              <h3 className="text-3xl font-bold text-white mb-4">Enterprise Security</h3>
               <p className="text-gray-400 text-lg max-w-md mx-auto">
-                Your projects are protected by the same security standards used by major financial institutions
+                Your projects are protected by comprehensive security measures including encryption, secure key management, and access controls
               </p>
             </div>
           </div>
@@ -674,11 +674,11 @@ function App() {
               <div className="text-gray-300 space-y-3">
                 <p>Project timelines vary based on complexity and scope:</p>
                 <ul className="space-y-2 ml-4">
-                  <li>• <strong>Content Creation:</strong> 3-7 days</li>
-                  <li>• <strong>Smart Contract Development:</strong> 2-4 weeks</li>
-                  <li>• <strong>Full DApp Development:</strong> 4-12 weeks</li>
-                  <li>• <strong>Security Audits:</strong> 1-2 weeks</li>
-                  <li>• <strong>Whitepaper Writing:</strong> 1-2 weeks</li>
+                  <li>• <strong>Content Creation:</strong> 1-2 weeks</li>
+                  <li>• <strong>Smart Contract Development:</strong> 4-8 weeks</li>
+                  <li>• <strong>Full DApp Development:</strong> 8-16 weeks</li>
+                  <li>• <strong>Security Audits:</strong> 2-4 weeks</li>
+                  <li>• <strong>Whitepaper Writing:</strong> 2-4 weeks</li>
                 </ul>
                 <p className="text-sm text-gray-400">
                   Rush delivery available for urgent projects (additional fees apply).
@@ -796,7 +796,7 @@ function App() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-3">Lightning Fast Delivery</h3>
-                  <p className="text-gray-400 leading-relaxed">Rapid development cycles with enterprise-grade quality. Most projects delivered within 2-4 weeks.</p>
+                  <p className="text-gray-400 leading-relaxed">Efficient development cycles with enterprise-grade quality. Timeline varies by project complexity and scope.</p>
                 </div>
               </div>
               
@@ -808,7 +808,7 @@ function App() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-3">Battle-Tested Security</h3>
-                  <p className="text-gray-400 leading-relaxed">All smart contracts undergo rigorous security audits. Zero successful exploits across 100+ deployed contracts.</p>
+                  <p className="text-gray-400 leading-relaxed">All smart contracts undergo comprehensive security audits and testing. Strong security track record with multiple successful deployments.</p>
                 </div>
               </div>
               
@@ -820,7 +820,7 @@ function App() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-3">Expert Team</h3>
-                  <p className="text-gray-400 leading-relaxed">Senior developers with 5+ years in DeFi, former engineers from top crypto protocols.</p>
+                  <p className="text-gray-400 leading-relaxed">Experienced developers with deep expertise in blockchain technologies and decentralized finance.</p>
                 </div>
               </div>
             </div>
@@ -829,19 +829,19 @@ function App() {
               <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl border border-gray-700/50 p-8">
                 <div className="grid grid-cols-2 gap-6 text-center">
                   <div>
-                    <div className="text-4xl font-black text-green-400 mb-2">$50M+</div>
+                    <div className="text-4xl font-black text-green-400 mb-2">$5M+</div>
                     <div className="text-gray-400 text-sm uppercase tracking-wider">Total Value Secured</div>
                   </div>
                   <div>
-                    <div className="text-4xl font-black text-cyan-400 mb-2">99.9%</div>
-                    <div className="text-gray-400 text-sm uppercase tracking-wider">Uptime Guarantee</div>
+                    <div className="text-4xl font-black text-cyan-400 mb-2">99%</div>
+                    <div className="text-gray-400 text-sm uppercase tracking-wider">Uptime Target</div>
                   </div>
                   <div>
-                    <div className="text-4xl font-black text-purple-400 mb-2">24h</div>
+                    <div className="text-4xl font-black text-purple-400 mb-2">48h</div>
                     <div className="text-gray-400 text-sm uppercase tracking-wider">Response Time</div>
                   </div>
                   <div>
-                    <div className="text-4xl font-black text-pink-400 mb-2">100%</div>
+                    <div className="text-4xl font-black text-pink-400 mb-2">95%</div>
                     <div className="text-gray-400 text-sm uppercase tracking-wider">Client Satisfaction</div>
                   </div>
                 </div>
@@ -875,10 +875,10 @@ function App() {
                   </div>
                   <div>
                     <div className="text-white font-semibold">Anonymous DeFi Founder</div>
-                    <div className="text-gray-400 text-sm">$10M+ TVL Protocol</div>
+                    <div className="text-gray-400 text-sm">DeFi Protocol</div>
                   </div>
                 </div>
-                <p className="text-gray-300 leading-relaxed mb-6">"Exceptional work on our DEX smart contracts. The team delivered bulletproof code ahead of schedule with comprehensive security audits. Our protocol has processed over $100M in volume with zero issues."</p>
+                <p className="text-gray-300 leading-relaxed mb-6">"Excellent work on our DEX smart contracts. The team delivered secure, well-tested code with thorough documentation. Our protocol has been running smoothly since deployment."</p>
                 <div className="flex text-yellow-400">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -901,7 +901,7 @@ function App() {
                     <div className="text-gray-400 text-sm">NFT Marketplace</div>
                   </div>
                 </div>
-                <p className="text-gray-300 leading-relaxed mb-6">"Outstanding dApp development and technical writing. They built our entire NFT marketplace from scratch and created professional documentation that helped us secure $2M in funding. Highly recommended!"</p>
+                <p className="text-gray-300 leading-relaxed mb-6">"Outstanding dApp development and technical writing. They built our NFT marketplace from scratch and created professional documentation that helped with our funding process. Highly recommended!"</p>
                 <div className="flex text-yellow-400">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -1111,7 +1111,7 @@ function App() {
                       <p className="text-gray-300 text-sm leading-relaxed">
                         Your submission is encrypted end-to-end and automatically deleted after 24 hours. 
                         We never store personal information, IP addresses, or metadata. All project discussions 
-                        happen through your chosen anonymous channel with military-grade encryption.
+                        happen through your chosen anonymous channel with AES-256 encryption.
                       </p>
                     </div>
                   </div>

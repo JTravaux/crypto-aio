@@ -31,9 +31,10 @@ const ContactForm = () => {
     )
       .then(() => {
         addToast({
-          title: 'Thank You!',
-          description: 'We will review your request and get back to you as soon as possible.',
+          title: "Request Received – Under Review",
+          description: "Your submission has been received. We carefully review each request and will reach out only if we decide to move forward with your project. Kindly avoid submitting duplicate requests.",
           color: 'success',
+          timeout: 10000, // 10 seconds
         });
         setServices([]);
         setProjectDescription('');
@@ -242,7 +243,7 @@ const ContactForm = () => {
           Submit Anonymous Quote Request
         </Button>
         <p className="text-gray-400 text-sm mt-4">
-          Response within 2-4 hours • All communications encrypted
+          Response within 24 hours • All communications encrypted
         </p>
       </div>
     </form>

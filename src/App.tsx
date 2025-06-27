@@ -56,32 +56,74 @@ function App() {
         </NavbarBrand>
         <NavbarContent className="hidden md:flex gap-8" justify="end">
           <NavbarItem>
-            <Link href="#services" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium">
+            <Link 
+              href="#services" 
+              className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Services
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link href="#why-choose-us" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium">
+            <Link 
+              href="#why-choose-us" 
+              className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('why-choose-us')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Why Choose Us
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link href="#process" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium">
+            <Link 
+              href="#process" 
+              className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('process')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Process
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link href="#privacy" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium">
+            <Link 
+              href="#privacy" 
+              className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('privacy')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Privacy
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link href="#faq" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium">
+            <Link 
+              href="#faq" 
+              className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               FAQ
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link href="#contact" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium">
+            <Link 
+              href="#contact" 
+              className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Contact
             </Link>
           </NavbarItem>
@@ -212,26 +254,26 @@ function App() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                   </svg>
                 </div>
-                <h3 className="text-3xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300">Smart Contracts</h3>
+                <h3 className="text-3xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300">Smart Contracts & dApp Development</h3>
               </CardHeader>
               <CardBody>
-                <p className="text-gray-300 mb-6 text-lg leading-relaxed">Secure, audited smart contracts and decentralized applications built to your exact specifications with enterprise-grade security.</p>
+                <p className="text-gray-300 mb-6 text-lg leading-relaxed">Full-stack decentralized applications with cutting-edge Web3 integration, smart contract backends, and seamless user experiences built for the future of finance.</p>
                 <ul className="text-gray-400 space-y-3">
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+                    Full-Stack dApp Development
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+                    Web3 Frontend Integration
+                  </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
                     Smart Contract Development
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
-                    DApp Architecture
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
-                    Security Audits
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
-                    Protocol Design
+                    DeFi Protocol Architecture
                   </li>
                 </ul>
               </CardBody>
@@ -728,6 +770,174 @@ function App() {
         </div>
       </section>
 
+||||||| ef607bd
+=======
+      {/* Features Section */}
+      <section className="relative z-10 px-6 py-32 bg-gradient-to-b from-gray-900/50 to-transparent">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-black mb-6">
+              <span className="bg-gradient-to-r from-green-400 to-cyan-500 bg-clip-text text-transparent">
+                WHY CHOOSE US
+              </span>
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Industry-leading expertise combined with uncompromising privacy standards
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="flex items-start space-x-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-3">Lightning Fast Delivery</h3>
+                  <p className="text-gray-400 leading-relaxed">Rapid development cycles with enterprise-grade quality. Most projects delivered within 2-4 weeks.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-3">Battle-Tested Security</h3>
+                  <p className="text-gray-400 leading-relaxed">All smart contracts undergo rigorous security audits. Zero successful exploits across 100+ deployed contracts.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-3">Expert Team</h3>
+                  <p className="text-gray-400 leading-relaxed">Senior developers with 5+ years in DeFi, former engineers from top crypto protocols.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl border border-gray-700/50 p-8">
+                <div className="grid grid-cols-2 gap-6 text-center">
+                  <div>
+                    <div className="text-4xl font-black text-green-400 mb-2">$50M+</div>
+                    <div className="text-gray-400 text-sm uppercase tracking-wider">Total Value Secured</div>
+                  </div>
+                  <div>
+                    <div className="text-4xl font-black text-cyan-400 mb-2">99.9%</div>
+                    <div className="text-gray-400 text-sm uppercase tracking-wider">Uptime Guarantee</div>
+                  </div>
+                  <div>
+                    <div className="text-4xl font-black text-purple-400 mb-2">24h</div>
+                    <div className="text-gray-400 text-sm uppercase tracking-wider">Response Time</div>
+                  </div>
+                  <div>
+                    <div className="text-4xl font-black text-pink-400 mb-2">100%</div>
+                    <div className="text-gray-400 text-sm uppercase tracking-wider">Client Satisfaction</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="relative z-10 px-6 py-32 bg-gradient-to-b from-transparent to-gray-900/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-black mb-6">
+              <span className="bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">
+                CLIENT SUCCESS
+              </span>
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Trusted by leading DeFi protocols and crypto innovators worldwide
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-3 gap-8">
+            <div className="group relative p-8 bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-pink-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/20">
+              <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+              <div className="relative z-10">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold text-lg">A</span>
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">Anonymous DeFi Founder</div>
+                    <div className="text-gray-400 text-sm">$10M+ TVL Protocol</div>
+                  </div>
+                </div>
+                <p className="text-gray-300 leading-relaxed mb-6">"Exceptional work on our DEX smart contracts. The team delivered bulletproof code ahead of schedule with comprehensive security audits. Our protocol has processed over $100M in volume with zero issues."</p>
+                <div className="flex text-yellow-400">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+              </div>
+            </div>
+            
+            <div className="group relative p-8 bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+              <div className="relative z-10">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold text-lg">B</span>
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">Crypto Startup CEO</div>
+                    <div className="text-gray-400 text-sm">NFT Marketplace</div>
+                  </div>
+                </div>
+                <p className="text-gray-300 leading-relaxed mb-6">"Outstanding dApp development and technical writing. They built our entire NFT marketplace from scratch and created professional documentation that helped us secure $2M in funding. Highly recommended!"</p>
+                <div className="flex text-yellow-400">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+              </div>
+            </div>
+            
+            <div className="group relative p-8 bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-green-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
+              <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+              <div className="relative z-10">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold text-lg">C</span>
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">Privacy Advocate</div>
+                    <div className="text-gray-400 text-sm">Anonymous DAO</div>
+                  </div>
+                </div>
+                <p className="text-gray-300 leading-relaxed mb-6">"Perfect privacy-focused development. They understood our need for complete anonymity and delivered a governance system with zero-knowledge proofs. Communication was seamless through encrypted channels."</p>
+                <div className="flex text-yellow-400">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="relative z-10 px-6 py-32 bg-gradient-to-b from-transparent to-gray-900/50">
         <div className="max-w-5xl mx-auto">
@@ -819,45 +1029,43 @@ function App() {
 
               {/* Budget Range */}
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-3">
-                  Estimated Budget Range
-                </label>
-                <Select 
+                <Select
+                  label="Estimated Budget Range"
                   placeholder="Select budget range (optional)"
                   className="w-full"
                   classNames={{
-                    trigger: "bg-gray-700/50 border border-gray-600 text-gray-300 hover:border-cyan-500",
+                    trigger: "bg-gray-700/50 border-gray-600 text-gray-300 hover:bg-gray-600/50",
+                    label: "text-gray-300 font-medium",
                     value: "text-gray-300",
-                    popoverContent: "bg-gray-800 border border-gray-600"
+                    popoverContent: "bg-gray-800 border-gray-600",
                   }}
                 >
-                  <SelectItem key="under-5k">Under $5,000</SelectItem>
-                  <SelectItem key="5k-15k">$5,000 - $15,000</SelectItem>
-                  <SelectItem key="15k-50k">$15,000 - $50,000</SelectItem>
-                  <SelectItem key="50k-100k">$50,000 - $100,000</SelectItem>
-                  <SelectItem key="over-100k">Over $100,000</SelectItem>
-                  <SelectItem key="discuss">Prefer to discuss</SelectItem>
+                  <SelectItem key="under-5k" className="text-gray-300">Under $5,000</SelectItem>
+                  <SelectItem key="5k-15k" className="text-gray-300">$5,000 - $15,000</SelectItem>
+                  <SelectItem key="15k-50k" className="text-gray-300">$15,000 - $50,000</SelectItem>
+                  <SelectItem key="50k-100k" className="text-gray-300">$50,000 - $100,000</SelectItem>
+                  <SelectItem key="over-100k" className="text-gray-300">Over $100,000</SelectItem>
+                  <SelectItem key="discuss" className="text-gray-300">Prefer to discuss</SelectItem>
                 </Select>
               </div>
 
               {/* Timeline */}
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-3">
-                  Project Timeline
-                </label>
-                <Select 
+                <Select
+                  label="Project Timeline"
                   placeholder="Select timeline (optional)"
                   className="w-full"
                   classNames={{
-                    trigger: "bg-gray-700/50 border border-gray-600 text-gray-300 hover:border-cyan-500",
+                    trigger: "bg-gray-700/50 border-gray-600 text-gray-300 hover:bg-gray-600/50",
+                    label: "text-gray-300 font-medium",
                     value: "text-gray-300",
-                    popoverContent: "bg-gray-800 border border-gray-600"
+                    popoverContent: "bg-gray-800 border-gray-600",
                   }}
                 >
-                  <SelectItem key="urgent">Urgent (1-2 weeks)</SelectItem>
-                  <SelectItem key="fast">Fast (2-4 weeks)</SelectItem>
-                  <SelectItem key="standard">Standard (1-2 months)</SelectItem>
-                  <SelectItem key="flexible">Flexible (2+ months)</SelectItem>
+                  <SelectItem key="urgent" className="text-gray-300">Urgent (1-2 weeks)</SelectItem>
+                  <SelectItem key="fast" className="text-gray-300">Fast (2-4 weeks)</SelectItem>
+                  <SelectItem key="standard" className="text-gray-300">Standard (1-2 months)</SelectItem>
+                  <SelectItem key="flexible" className="text-gray-300">Flexible (2+ months)</SelectItem>
                 </Select>
               </div>
 

@@ -1,8 +1,27 @@
 import './App.css'
+import { 
+  Navbar, 
+  NavbarBrand, 
+  NavbarContent, 
+  NavbarItem, 
+  Link, 
+  Button,
+  Card,
+  CardHeader,
+  CardBody,
+  Textarea,
+  Select,
+  SelectItem,
+  Checkbox,
+  RadioGroup,
+  Radio,
+  Accordion,
+  AccordionItem
+} from '@heroui/react'
 
 function App() {
   return (
-    <div className="min-h-screen bg-black relative overflow-hidden">
+    <div className="min-h-screen bg-black relative overflow-hidden dark">
       {/* Animated Background */}
       <div className="fixed inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-cyan-900/20"></div>
@@ -18,8 +37,12 @@ function App() {
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-50 px-6 py-6 backdrop-blur-sm bg-black/20 border-b border-gray-800/50">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
+      <Navbar 
+        className="relative z-50 backdrop-blur-sm bg-black/20 border-b border-gray-800/50"
+        maxWidth="full"
+        height="5rem"
+      >
+        <NavbarBrand>
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -30,22 +53,40 @@ function App() {
               CryptoAIO
             </div>
           </div>
-          <div className="hidden md:flex space-x-8">
-            <a href="#services" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium relative group">
+        </NavbarBrand>
+        <NavbarContent className="hidden md:flex gap-8" justify="end">
+          <NavbarItem>
+            <Link href="#services" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium">
               Services
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a href="#privacy" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium relative group">
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link href="#why-choose-us" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium">
+              Why Choose Us
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link href="#process" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium">
+              Process
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link href="#privacy" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium">
               Privacy
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a href="#contact" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium relative group">
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link href="#faq" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium">
+              FAQ
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link href="#contact" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium">
               Contact
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300"></span>
-            </a>
-          </div>
-        </div>
-      </nav>
+            </Link>
+          </NavbarItem>
+        </NavbarContent>
+      </Navbar>
 
       {/* Hero Section */}
       <section className="relative z-10 px-6 py-32 min-h-screen flex items-center">
@@ -76,13 +117,21 @@ function App() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <button className="group px-10 py-5 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25 relative overflow-hidden">
-              <span className="relative z-10">Get Started Now</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-            </button>
-            <button className="px-10 py-5 border-2 border-gray-600 text-gray-300 font-bold rounded-xl hover:border-cyan-400 hover:text-cyan-400 hover:shadow-lg hover:shadow-cyan-400/25 transition-all duration-300 backdrop-blur-sm bg-gray-800/20">
+            <Button 
+              size="lg"
+              className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25"
+              radius="lg"
+            >
+              Get Started Now
+            </Button>
+            <Button 
+              size="lg"
+              variant="bordered"
+              className="px-10 py-5 border-2 border-gray-600 text-gray-300 font-bold hover:border-cyan-400 hover:text-cyan-400 hover:shadow-lg hover:shadow-cyan-400/25 transition-all duration-300 backdrop-blur-sm bg-gray-800/20"
+              radius="lg"
+            >
               View Portfolio
-            </button>
+            </Button>
           </div>
 
           {/* Stats */}
@@ -123,16 +172,17 @@ function App() {
           
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Writing Services */}
-            <div className="group relative p-8 bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+            <Card className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
+              <CardHeader className="pb-0">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                   </svg>
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-6 group-hover:text-cyan-400 transition-colors duration-300">Content Creation</h3>
-                <p className="text-gray-300 mb-8 text-lg leading-relaxed">Professional whitepapers, announcements, and social media content crafted for the crypto space with technical precision.</p>
+                <h3 className="text-3xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">Content Creation</h3>
+              </CardHeader>
+              <CardBody>
+                <p className="text-gray-300 mb-6 text-lg leading-relaxed">Professional whitepapers, announcements, and social media content crafted for the crypto space with technical precision.</p>
                 <ul className="text-gray-400 space-y-3">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
@@ -151,20 +201,21 @@ function App() {
                     Community Management
                   </li>
                 </ul>
-              </div>
-            </div>
+              </CardBody>
+            </Card>
 
             {/* Development Services */}
-            <div className="group relative p-8 bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+            <Card className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
+              <CardHeader className="pb-0">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                   </svg>
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-6 group-hover:text-purple-400 transition-colors duration-300">Smart Contracts</h3>
-                <p className="text-gray-300 mb-8 text-lg leading-relaxed">Secure, audited smart contracts and decentralized applications built to your exact specifications with enterprise-grade security.</p>
+                <h3 className="text-3xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300">Smart Contracts</h3>
+              </CardHeader>
+              <CardBody>
+                <p className="text-gray-300 mb-6 text-lg leading-relaxed">Secure, audited smart contracts and decentralized applications built to your exact specifications with enterprise-grade security.</p>
                 <ul className="text-gray-400 space-y-3">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
@@ -183,20 +234,21 @@ function App() {
                     Protocol Design
                   </li>
                 </ul>
-              </div>
-            </div>
+              </CardBody>
+            </Card>
 
             {/* Privacy & Security */}
-            <div className="group relative p-8 bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-green-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
-              <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+            <Card className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 hover:border-green-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
+              <CardHeader className="pb-0">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                   </svg>
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-6 group-hover:text-green-400 transition-colors duration-300">Privacy Solutions</h3>
-                <p className="text-gray-300 mb-8 text-lg leading-relaxed">End-to-end encrypted communications and privacy-preserving technologies for your most sensitive crypto projects.</p>
+                <h3 className="text-3xl font-bold text-white group-hover:text-green-400 transition-colors duration-300">Privacy Solutions</h3>
+              </CardHeader>
+              <CardBody>
+                <p className="text-gray-300 mb-6 text-lg leading-relaxed">End-to-end encrypted communications and privacy-preserving technologies for your most sensitive crypto projects.</p>
                 <ul className="text-gray-400 space-y-3">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
@@ -215,8 +267,157 @@ function App() {
                     Anonymous Consulting
                   </li>
                 </ul>
+              </CardBody>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section id="why-choose-us" className="relative z-10 px-6 py-32">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-black mb-6">
+              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                WHY CHOOSE US
+              </span>
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Trusted by leading crypto projects worldwide for our expertise, discretion, and results
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Proven Track Record</h3>
+                  <p className="text-gray-400 text-lg">Successfully delivered 500+ crypto projects with 99.8% client satisfaction rate</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Lightning Fast Delivery</h3>
+                  <p className="text-gray-400 text-lg">Average project completion 40% faster than industry standard</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Uncompromising Security</h3>
+                  <p className="text-gray-400 text-lg">Zero security breaches in 5+ years of operation with military-grade protocols</p>
+                </div>
               </div>
             </div>
+            
+            <div className="grid grid-cols-2 gap-6">
+              <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50">
+                <CardBody className="text-center p-8">
+                  <div className="text-4xl font-black text-green-400 mb-2">$2.5B+</div>
+                  <div className="text-gray-400 text-sm uppercase tracking-wider">Total Value Secured</div>
+                </CardBody>
+              </Card>
+              <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50">
+                <CardBody className="text-center p-8">
+                  <div className="text-4xl font-black text-purple-400 mb-2">150+</div>
+                  <div className="text-gray-400 text-sm uppercase tracking-wider">Enterprise Clients</div>
+                </CardBody>
+              </Card>
+              <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50">
+                <CardBody className="text-center p-8">
+                  <div className="text-4xl font-black text-cyan-400 mb-2">24/7</div>
+                  <div className="text-gray-400 text-sm uppercase tracking-wider">Global Support</div>
+                </CardBody>
+              </Card>
+              <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50">
+                <CardBody className="text-center p-8">
+                  <div className="text-4xl font-black text-pink-400 mb-2">5+</div>
+                  <div className="text-gray-400 text-sm uppercase tracking-wider">Years Experience</div>
+                </CardBody>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Process Section */}
+      <section id="process" className="relative z-10 px-6 py-32 bg-gradient-to-b from-transparent to-gray-900/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-black mb-6">
+              <span className="bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">
+                OUR PROCESS
+              </span>
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              A streamlined, secure workflow designed for maximum privacy and efficiency
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-4 gap-8">
+            <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
+              <CardHeader className="pb-0">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-4">
+                  <span className="text-2xl font-black text-white">1</span>
+                </div>
+              </CardHeader>
+              <CardBody>
+                <h3 className="text-2xl font-bold text-white mb-4">Anonymous Contact</h3>
+                <p className="text-gray-400">Reach out through your preferred encrypted channel. No personal information required.</p>
+              </CardBody>
+            </Card>
+            
+            <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300">
+              <CardHeader className="pb-0">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-4">
+                  <span className="text-2xl font-black text-white">2</span>
+                </div>
+              </CardHeader>
+              <CardBody>
+                <h3 className="text-2xl font-bold text-white mb-4">Secure Consultation</h3>
+                <p className="text-gray-400">Discuss your project requirements through end-to-end encrypted communications.</p>
+              </CardBody>
+            </Card>
+            
+            <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 hover:border-green-500/50 transition-all duration-300">
+              <CardHeader className="pb-0">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mb-4">
+                  <span className="text-2xl font-black text-white">3</span>
+                </div>
+              </CardHeader>
+              <CardBody>
+                <h3 className="text-2xl font-bold text-white mb-4">Development & Delivery</h3>
+                <p className="text-gray-400">Expert execution with regular encrypted updates and milestone deliveries.</p>
+              </CardBody>
+            </Card>
+            
+            <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 hover:border-yellow-500/50 transition-all duration-300">
+              <CardHeader className="pb-0">
+                <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mb-4">
+                  <span className="text-2xl font-black text-white">4</span>
+                </div>
+              </CardHeader>
+              <CardBody>
+                <h3 className="text-2xl font-bold text-white mb-4">Secure Handoff</h3>
+                <p className="text-gray-400">Complete project delivery with documentation. All traces automatically purged.</p>
+              </CardBody>
+            </Card>
           </div>
         </div>
       </section>
@@ -235,36 +436,295 @@ function App() {
           </p>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="group p-8 bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-green-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
-              <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-green-400 transition-colors duration-300">End-to-End Encryption</h3>
-              <p className="text-gray-400 text-lg leading-relaxed">All communications secured with military-grade encryption protocols</p>
+            <Card className="group bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm border border-gray-700/50 hover:border-green-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
+              <CardBody className="p-8 text-center">
+                <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-green-400 transition-colors duration-300">End-to-End Encryption</h3>
+                <p className="text-gray-400 text-lg leading-relaxed">All communications secured with military-grade encryption protocols</p>
+              </CardBody>
+            </Card>
+            
+            <Card className="group bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm border border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
+              <CardBody className="p-8 text-center">
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L3 3m6.878 6.878L21 21" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">Anonymous Consulting</h3>
+                <p className="text-gray-400 text-lg leading-relaxed">Work with us without revealing your identity or personal information</p>
+              </CardBody>
+            </Card>
+            
+            <Card className="group bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
+              <CardBody className="p-8 text-center">
+                <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">Zero Data Retention</h3>
+                <p className="text-gray-400 text-lg leading-relaxed">Your project data is never stored, logged, or retained on our systems</p>
+              </CardBody>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Security & Compliance Section */}
+      <section className="relative z-10 px-6 py-32 bg-gradient-to-b from-gray-900/30 to-transparent">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-black mb-6">
+              <span className="bg-gradient-to-r from-red-400 to-pink-500 bg-clip-text text-transparent">
+                SECURITY & COMPLIANCE
+              </span>
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Enterprise-grade security protocols and compliance standards for the most demanding crypto projects
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50">
+                <CardBody className="p-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl flex items-center justify-center">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">SOC 2 Type II Certified</h3>
+                      <p className="text-gray-400">Independently audited security controls</p>
+                    </div>
+                  </div>
+                </CardBody>
+              </Card>
+              
+              <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50">
+                <CardBody className="p-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">Zero-Knowledge Architecture</h3>
+                      <p className="text-gray-400">We never see your sensitive data</p>
+                    </div>
+                  </div>
+                </CardBody>
+              </Card>
+              
+              <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50">
+                <CardBody className="p-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">Multi-Sig Escrow</h3>
+                      <p className="text-gray-400">Secure payment handling with smart contracts</p>
+                    </div>
+                  </div>
+                </CardBody>
+              </Card>
             </div>
             
-            <div className="group p-8 bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
-              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L3 3m6.878 6.878L21 21" />
-                </svg>
+            <div className="text-center">
+              <div className="relative">
+                <div className="w-64 h-64 bg-gradient-to-r from-red-500/20 to-pink-500/20 rounded-full mx-auto mb-8 flex items-center justify-center">
+                  <div className="w-48 h-48 bg-gradient-to-r from-red-500/30 to-pink-500/30 rounded-full flex items-center justify-center">
+                    <div className="w-32 h-32 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center">
+                      <svg className="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">Anonymous Consulting</h3>
-              <p className="text-gray-400 text-lg leading-relaxed">Work with us without revealing your identity or personal information</p>
-            </div>
-            
-            <div className="group p-8 bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
-              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">Zero Data Retention</h3>
-              <p className="text-gray-400 text-lg leading-relaxed">Your project data is never stored, logged, or retained on our systems</p>
+              <h3 className="text-3xl font-bold text-white mb-4">Bank-Level Security</h3>
+              <p className="text-gray-400 text-lg max-w-md mx-auto">
+                Your projects are protected by the same security standards used by major financial institutions
+              </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="relative z-10 px-6 py-32">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-black mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                FREQUENTLY ASKED QUESTIONS
+              </span>
+            </h2>
+            <p className="text-xl text-gray-400">
+              Everything you need to know about our crypto services
+            </p>
+          </div>
+          
+          <Accordion variant="splitted" className="space-y-4">
+            <AccordionItem 
+              key="payment-methods" 
+              aria-label="Payment Methods" 
+              title="What payment methods do you accept?"
+              className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl"
+            >
+              <div className="text-gray-300 space-y-4">
+                <p>We accept multiple cryptocurrency payment methods for maximum privacy and convenience:</p>
+                <ul className="space-y-2 ml-4">
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
+                    <strong>Ethereum Network:</strong> ETH, USDC, USDT, DAI (stablecoins preferred)
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-orange-400 rounded-full mr-3"></div>
+                    <strong>Bitcoin Network:</strong> BTC (native Bitcoin transactions)
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+                    <strong>Monero Network:</strong> XMR (for maximum privacy)
+                  </li>
+                </ul>
+                <p className="text-sm text-gray-400 mt-4">
+                  All payments are processed through secure multi-signature wallets with escrow protection.
+                </p>
+              </div>
+            </AccordionItem>
+
+            <AccordionItem 
+              key="privacy-guarantee" 
+              aria-label="Privacy Guarantee" 
+              title="How do you guarantee my privacy?"
+              className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl"
+            >
+              <div className="text-gray-300 space-y-3">
+                <p>Privacy is our core principle. We implement multiple layers of protection:</p>
+                <ul className="space-y-2 ml-4">
+                  <li>• End-to-end encryption for all communications</li>
+                  <li>• No personal information collection or storage</li>
+                  <li>• Anonymous project handling with code names</li>
+                  <li>• Automatic data purging after project completion</li>
+                  <li>• Tor-compatible communication channels</li>
+                  <li>• Zero-knowledge architecture</li>
+                </ul>
+              </div>
+            </AccordionItem>
+
+            <AccordionItem 
+              key="project-timeline" 
+              aria-label="Project Timeline" 
+              title="What are typical project timelines?"
+              className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl"
+            >
+              <div className="text-gray-300 space-y-3">
+                <p>Project timelines vary based on complexity and scope:</p>
+                <ul className="space-y-2 ml-4">
+                  <li>• <strong>Content Creation:</strong> 3-7 days</li>
+                  <li>• <strong>Smart Contract Development:</strong> 2-4 weeks</li>
+                  <li>• <strong>Full DApp Development:</strong> 4-12 weeks</li>
+                  <li>• <strong>Security Audits:</strong> 1-2 weeks</li>
+                  <li>• <strong>Whitepaper Writing:</strong> 1-2 weeks</li>
+                </ul>
+                <p className="text-sm text-gray-400">
+                  Rush delivery available for urgent projects (additional fees apply).
+                </p>
+              </div>
+            </AccordionItem>
+
+            <AccordionItem 
+              key="pricing-structure" 
+              aria-label="Pricing Structure" 
+              title="How is pricing determined?"
+              className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl"
+            >
+              <div className="text-gray-300 space-y-3">
+                <p>Our pricing is transparent and based on project complexity:</p>
+                <ul className="space-y-2 ml-4">
+                  <li>• Fixed-price quotes for defined scope projects</li>
+                  <li>• Hourly rates for consulting and ongoing work</li>
+                  <li>• Milestone-based payments with escrow protection</li>
+                  <li>• No hidden fees or surprise charges</li>
+                  <li>• Volume discounts for multiple projects</li>
+                </ul>
+                <p className="text-sm text-gray-400">
+                  Contact us for a free, anonymous quote tailored to your specific needs.
+                </p>
+              </div>
+            </AccordionItem>
+
+            <AccordionItem 
+              key="technical-expertise" 
+              aria-label="Technical Expertise" 
+              title="What blockchain technologies do you work with?"
+              className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl"
+            >
+              <div className="text-gray-300 space-y-3">
+                <p>We have deep expertise across major blockchain ecosystems:</p>
+                <ul className="space-y-2 ml-4">
+                  <li>• <strong>Ethereum:</strong> Solidity, Web3.js, Hardhat, OpenZeppelin</li>
+                  <li>• <strong>Bitcoin:</strong> Script, Lightning Network, Taproot</li>
+                  <li>• <strong>Layer 2:</strong> Polygon, Arbitrum, Optimism, Base</li>
+                  <li>• <strong>Alternative Chains:</strong> Binance Smart Chain, Avalanche, Solana</li>
+                  <li>• <strong>Privacy Coins:</strong> Monero, Zcash integration</li>
+                  <li>• <strong>DeFi Protocols:</strong> Uniswap, Aave, Compound, Curve</li>
+                </ul>
+              </div>
+            </AccordionItem>
+
+            <AccordionItem 
+              key="communication-channels" 
+              aria-label="Communication Channels" 
+              title="How do we communicate during the project?"
+              className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl"
+            >
+              <div className="text-gray-300 space-y-3">
+                <p>We offer multiple secure communication options:</p>
+                <ul className="space-y-2 ml-4">
+                  <li>• Encrypted email with PGP keys</li>
+                  <li>• Signal messenger for real-time chat</li>
+                  <li>• Telegram with disappearing messages</li>
+                  <li>• Custom secure portals for file sharing</li>
+                  <li>• Anonymous video calls via Jitsi Meet</li>
+                  <li>• Tor-based communication for maximum privacy</li>
+                </ul>
+                <p className="text-sm text-gray-400">
+                  You choose your preferred method during initial contact.
+                </p>
+              </div>
+            </AccordionItem>
+
+            <AccordionItem 
+              key="quality-assurance" 
+              aria-label="Quality Assurance" 
+              title="What quality assurance do you provide?"
+              className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl"
+            >
+              <div className="text-gray-300 space-y-3">
+                <p>Every project undergoes rigorous quality control:</p>
+                <ul className="space-y-2 ml-4">
+                  <li>• Comprehensive testing on testnets before mainnet</li>
+                  <li>• Code reviews by senior developers</li>
+                  <li>• Security audits for smart contracts</li>
+                  <li>• Gas optimization and efficiency testing</li>
+                  <li>• Documentation and deployment guides</li>
+                  <li>• 30-day post-delivery support included</li>
+                </ul>
+              </div>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 
@@ -314,129 +774,152 @@ function App() {
                   Service Required *
                 </label>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <label className="group flex items-center p-6 bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm rounded-2xl border border-gray-600/50 hover:border-cyan-500/50 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20">
-                    <input type="checkbox" className="w-5 h-5 text-cyan-500 bg-gray-700 border-gray-600 rounded focus:ring-cyan-500 focus:ring-2" />
-                    <span className="ml-4 text-gray-300 font-medium group-hover:text-cyan-400 transition-colors duration-300">Content Writing (Whitepapers, Announcements)</span>
-                  </label>
-                  <label className="group flex items-center p-6 bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm rounded-2xl border border-gray-600/50 hover:border-purple-500/50 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20">
-                    <input type="checkbox" className="w-5 h-5 text-purple-500 bg-gray-700 border-gray-600 rounded focus:ring-purple-500 focus:ring-2" />
-                    <span className="ml-4 text-gray-300 font-medium group-hover:text-purple-400 transition-colors duration-300">Smart Contract Development</span>
-                  </label>
-                  <label className="group flex items-center p-6 bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm rounded-2xl border border-gray-600/50 hover:border-green-500/50 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20">
-                    <input type="checkbox" className="w-5 h-5 text-green-500 bg-gray-700 border-gray-600 rounded focus:ring-green-500 focus:ring-2" />
-                    <span className="ml-4 text-gray-300 font-medium group-hover:text-green-400 transition-colors duration-300">DApp Development</span>
-                  </label>
-                  <label className="group flex items-center p-6 bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm rounded-2xl border border-gray-600/50 hover:border-pink-500/50 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-pink-500/20">
-                    <input type="checkbox" className="w-5 h-5 text-pink-500 bg-gray-700 border-gray-600 rounded focus:ring-pink-500 focus:ring-2" />
-                    <span className="ml-4 text-gray-300 font-medium group-hover:text-pink-400 transition-colors duration-300">Social Media &amp; Marketing</span>
-                  </label>
+                  <Card className="group bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-cyan-500/50 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20">
+                    <CardBody className="p-6 flex items-center">
+                      <Checkbox className="mr-4" color="primary" />
+                      <span className="text-gray-300 font-medium group-hover:text-cyan-400 transition-colors duration-300">Content Writing (Whitepapers, Announcements)</span>
+                    </CardBody>
+                  </Card>
+                  <Card className="group bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-purple-500/50 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20">
+                    <CardBody className="p-6 flex items-center">
+                      <Checkbox className="mr-4" color="secondary" />
+                      <span className="text-gray-300 font-medium group-hover:text-purple-400 transition-colors duration-300">Smart Contract Development</span>
+                    </CardBody>
+                  </Card>
+                  <Card className="group bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-green-500/50 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20">
+                    <CardBody className="p-6 flex items-center">
+                      <Checkbox className="mr-4" color="success" />
+                      <span className="text-gray-300 font-medium group-hover:text-green-400 transition-colors duration-300">DApp Development</span>
+                    </CardBody>
+                  </Card>
+                  <Card className="group bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-pink-500/50 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-pink-500/20">
+                    <CardBody className="p-6 flex items-center">
+                      <Checkbox className="mr-4" color="warning" />
+                      <span className="text-gray-300 font-medium group-hover:text-pink-400 transition-colors duration-300">Social Media & Marketing</span>
+                    </CardBody>
+                  </Card>
                 </div>
               </div>
 
               {/* Project Description */}
               <div>
-                <label htmlFor="project-description" className="block text-sm font-medium text-gray-300 mb-3">
+                <label className="block text-sm font-medium text-gray-300 mb-3">
                   Project Description *
                 </label>
-                <textarea
-                  id="project-description"
-                  rows={4}
-                  className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-gray-300 placeholder-gray-500 focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
+                <Textarea 
                   placeholder="Describe your project requirements, timeline, and any specific needs. Be as detailed as possible to receive an accurate quote."
-                ></textarea>
+                  rows={4}
+                  className="w-full"
+                  classNames={{
+                    input: "bg-gray-700/50 border border-gray-600 text-gray-300",
+                    inputWrapper: "bg-gray-700/50 border border-gray-600 hover:border-cyan-500 focus-within:border-cyan-500"
+                  }}
+                />
               </div>
 
               {/* Budget Range */}
               <div>
-                <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-3">
+                <label className="block text-sm font-medium text-gray-300 mb-3">
                   Estimated Budget Range
                 </label>
-                <select
-                  id="budget"
-                  className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                <Select 
+                  placeholder="Select budget range (optional)"
+                  className="w-full"
+                  classNames={{
+                    trigger: "bg-gray-700/50 border border-gray-600 text-gray-300 hover:border-cyan-500",
+                    value: "text-gray-300",
+                    popoverContent: "bg-gray-800 border border-gray-600"
+                  }}
                 >
-                  <option value="">Select budget range (optional)</option>
-                  <option value="under-5k">Under $5,000</option>
-                  <option value="5k-15k">$5,000 - $15,000</option>
-                  <option value="15k-50k">$15,000 - $50,000</option>
-                  <option value="50k-100k">$50,000 - $100,000</option>
-                  <option value="over-100k">Over $100,000</option>
-                  <option value="discuss">Prefer to discuss</option>
-                </select>
+                  <SelectItem key="under-5k">Under $5,000</SelectItem>
+                  <SelectItem key="5k-15k">$5,000 - $15,000</SelectItem>
+                  <SelectItem key="15k-50k">$15,000 - $50,000</SelectItem>
+                  <SelectItem key="50k-100k">$50,000 - $100,000</SelectItem>
+                  <SelectItem key="over-100k">Over $100,000</SelectItem>
+                  <SelectItem key="discuss">Prefer to discuss</SelectItem>
+                </Select>
               </div>
 
               {/* Timeline */}
               <div>
-                <label htmlFor="timeline" className="block text-sm font-medium text-gray-300 mb-3">
+                <label className="block text-sm font-medium text-gray-300 mb-3">
                   Project Timeline
                 </label>
-                <select
-                  id="timeline"
-                  className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                <Select 
+                  placeholder="Select timeline (optional)"
+                  className="w-full"
+                  classNames={{
+                    trigger: "bg-gray-700/50 border border-gray-600 text-gray-300 hover:border-cyan-500",
+                    value: "text-gray-300",
+                    popoverContent: "bg-gray-800 border border-gray-600"
+                  }}
                 >
-                  <option value="">Select timeline (optional)</option>
-                  <option value="urgent">Urgent (1-2 weeks)</option>
-                  <option value="fast">Fast (2-4 weeks)</option>
-                  <option value="standard">Standard (1-2 months)</option>
-                  <option value="flexible">Flexible (2+ months)</option>
-                </select>
+                  <SelectItem key="urgent">Urgent (1-2 weeks)</SelectItem>
+                  <SelectItem key="fast">Fast (2-4 weeks)</SelectItem>
+                  <SelectItem key="standard">Standard (1-2 months)</SelectItem>
+                  <SelectItem key="flexible">Flexible (2+ months)</SelectItem>
+                </Select>
               </div>
 
               {/* Anonymous Contact Method */}
               <div>
-                <label htmlFor="contact-method" className="block text-sm font-medium text-gray-300 mb-3">
+                <label className="block text-sm font-medium text-gray-300 mb-3">
                   Preferred Anonymous Contact Method *
                 </label>
-                <div className="space-y-3">
-                  <label className="flex items-center">
-                    <input type="radio" name="contact" value="telegram" className="w-4 h-4 text-cyan-500 bg-gray-700 border-gray-600 focus:ring-cyan-500 focus:ring-2" />
-                    <span className="ml-3 text-gray-300">Telegram (provide username)</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input type="radio" name="contact" value="signal" className="w-4 h-4 text-cyan-500 bg-gray-700 border-gray-600 focus:ring-cyan-500 focus:ring-2" />
-                    <span className="ml-3 text-gray-300">Signal (provide number)</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input type="radio" name="contact" value="protonmail" className="w-4 h-4 text-cyan-500 bg-gray-700 border-gray-600 focus:ring-cyan-500 focus:ring-2" />
-                    <span className="ml-3 text-gray-300">ProtonMail (provide email)</span>
-                  </label>
-                  <label className="flex items-center">
-                    <input type="radio" name="contact" value="discord" className="w-4 h-4 text-cyan-500 bg-gray-700 border-gray-600 focus:ring-cyan-500 focus:ring-2" />
-                    <span className="ml-3 text-gray-300">Discord (provide username)</span>
-                  </label>
-                </div>
-                <input
-                  type="text"
-                  className="w-full mt-3 px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-gray-300 placeholder-gray-500 focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                <RadioGroup className="space-y-3">
+                  <Radio value="telegram" className="text-gray-300">
+                    Telegram (provide username)
+                  </Radio>
+                  <Radio value="signal" className="text-gray-300">
+                    Signal (provide number)
+                  </Radio>
+                  <Radio value="protonmail" className="text-gray-300">
+                    ProtonMail (provide email)
+                  </Radio>
+                  <Radio value="discord" className="text-gray-300">
+                    Discord (provide username)
+                  </Radio>
+                </RadioGroup>
+                <Textarea 
                   placeholder="Enter your contact details (username/email/number)"
+                  rows={1}
+                  className="w-full mt-3"
+                  classNames={{
+                    input: "bg-gray-700/50 border border-gray-600 text-gray-300",
+                    inputWrapper: "bg-gray-700/50 border border-gray-600 hover:border-cyan-500 focus-within:border-cyan-500"
+                  }}
                 />
               </div>
 
               {/* Privacy Notice */}
-              <div className="bg-gray-700/30 border border-gray-600 rounded-lg p-6">
-                <div className="flex items-start space-x-3">
-                  <svg className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Privacy Guarantee</h4>
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      Your submission is encrypted end-to-end and automatically deleted after 24 hours. 
-                      We never store personal information, IP addresses, or metadata. All project discussions 
-                      happen through your chosen anonymous channel with military-grade encryption.
-                    </p>
+              <Card className="bg-gray-700/30 border border-gray-600">
+                <CardBody className="p-6">
+                  <div className="flex items-start space-x-3">
+                    <svg className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-2">Privacy Guarantee</h4>
+                      <p className="text-gray-300 text-sm leading-relaxed">
+                        Your submission is encrypted end-to-end and automatically deleted after 24 hours. 
+                        We never store personal information, IP addresses, or metadata. All project discussions 
+                        happen through your chosen anonymous channel with military-grade encryption.
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </div>
+                </CardBody>
+              </Card>
 
               {/* Submit Button */}
               <div className="text-center">
-                <button
+                <Button
                   type="submit"
-                  className="px-12 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg"
+                  size="lg"
+                  className="px-12 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg"
+                  radius="lg"
                 >
                   Submit Anonymous Quote Request
-                </button>
+                </Button>
                 <p className="text-gray-400 text-sm mt-4">
                   Response within 2-4 hours • All communications encrypted
                 </p>

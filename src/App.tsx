@@ -900,30 +900,38 @@ function App() {
                   Service Required *
                 </label>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                  <Card className="group bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-cyan-500/50 cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/20">
-                    <CardBody className="p-6 flex items-center min-h-[80px]">
-                      <Checkbox className="mr-4" color="primary" />
-                      <span className="text-gray-300 font-medium group-hover:text-cyan-400 transition-colors duration-300 text-base">Content Writing (Whitepapers, Announcements)</span>
-                    </CardBody>
-                  </Card>
-                  <Card className="group bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-purple-500/50 cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-500/20">
-                    <CardBody className="p-6 flex items-center min-h-[80px]">
-                      <Checkbox className="mr-4" color="secondary" />
-                      <span className="text-gray-300 font-medium group-hover:text-purple-400 transition-colors duration-300 text-base">Smart Contract Development</span>
-                    </CardBody>
-                  </Card>
-                  <Card className="group bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-green-500/50 cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-green-500/20">
-                    <CardBody className="p-6 flex items-center min-h-[80px]">
-                      <Checkbox className="mr-4" color="success" />
-                      <span className="text-gray-300 font-medium group-hover:text-green-400 transition-colors duration-300 text-base">DApp Development</span>
-                    </CardBody>
-                  </Card>
-                  <Card className="group bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-pink-500/50 cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-pink-500/20">
-                    <CardBody className="p-6 flex items-center min-h-[80px]">
-                      <Checkbox className="mr-4" color="warning" />
-                      <span className="text-gray-300 font-medium group-hover:text-pink-400 transition-colors duration-300 text-base">Social Media & Marketing</span>
-                    </CardBody>
-                  </Card>
+                  <label className="group cursor-pointer">
+                    <Card className="bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/20 group-hover:border-cyan-500/70">
+                      <CardBody className="p-6 flex items-center min-h-[80px]">
+                        <Checkbox className="mr-4" color="primary" name="services" value="content-writing" />
+                        <span className="text-gray-300 font-medium group-hover:text-cyan-400 transition-colors duration-300 text-base">Content Writing (Whitepapers, Announcements)</span>
+                      </CardBody>
+                    </Card>
+                  </label>
+                  <label className="group cursor-pointer">
+                    <Card className="bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-500/20 group-hover:border-purple-500/70">
+                      <CardBody className="p-6 flex items-center min-h-[80px]">
+                        <Checkbox className="mr-4" color="secondary" name="services" value="smart-contracts" />
+                        <span className="text-gray-300 font-medium group-hover:text-purple-400 transition-colors duration-300 text-base">Smart Contract Development</span>
+                      </CardBody>
+                    </Card>
+                  </label>
+                  <label className="group cursor-pointer">
+                    <Card className="bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-green-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-green-500/20 group-hover:border-green-500/70">
+                      <CardBody className="p-6 flex items-center min-h-[80px]">
+                        <Checkbox className="mr-4" color="success" name="services" value="dapp-development" />
+                        <span className="text-gray-300 font-medium group-hover:text-green-400 transition-colors duration-300 text-base">DApp Development</span>
+                      </CardBody>
+                    </Card>
+                  </label>
+                  <label className="group cursor-pointer">
+                    <Card className="bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-pink-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-pink-500/20 group-hover:border-pink-500/70">
+                      <CardBody className="p-6 flex items-center min-h-[80px]">
+                        <Checkbox className="mr-4" color="warning" name="services" value="social-media" />
+                        <span className="text-gray-300 font-medium group-hover:text-pink-400 transition-colors duration-300 text-base">Social Media & Marketing</span>
+                      </CardBody>
+                    </Card>
+                  </label>
                 </div>
               </div>
 
@@ -937,8 +945,9 @@ function App() {
                   rows={5}
                   className="w-full"
                   classNames={{
-                    input: "bg-gray-700/50 border border-gray-600 text-gray-300 text-base leading-relaxed",
-                    inputWrapper: "bg-gray-700/50 border border-gray-600 hover:border-cyan-500 focus-within:border-cyan-500 min-h-[140px] transition-colors duration-300"
+                    base: "w-full",
+                    input: "bg-transparent text-gray-300 text-base leading-relaxed placeholder:text-gray-500",
+                    inputWrapper: "bg-gray-700/50 border border-gray-600 hover:border-cyan-500 focus-within:border-cyan-500 min-h-[140px] transition-colors duration-300 shadow-none"
                   }}
                 />
               </div>
@@ -1013,8 +1022,9 @@ function App() {
                   rows={2}
                   className="w-full"
                   classNames={{
-                    input: "bg-gray-700/50 border border-gray-600 text-gray-300 text-base",
-                    inputWrapper: "bg-gray-700/50 border border-gray-600 hover:border-cyan-500 focus-within:border-cyan-500 min-h-[60px] transition-colors duration-300"
+                    base: "w-full",
+                    input: "bg-transparent text-gray-300 text-base placeholder:text-gray-500",
+                    inputWrapper: "bg-gray-700/50 border border-gray-600 hover:border-cyan-500 focus-within:border-cyan-500 min-h-[60px] transition-colors duration-300 shadow-none"
                   }}
                 />
               </div>

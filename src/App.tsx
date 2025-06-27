@@ -1,10 +1,10 @@
 import './App.css'
-import { 
-  Navbar, 
-  NavbarBrand, 
-  NavbarContent, 
-  NavbarItem, 
-  Link, 
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  Link,
   Button,
   Card,
   CardHeader,
@@ -28,7 +28,7 @@ function App() {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/5 rounded-full blur-2xl animate-pulse"></div>
-        
+
         {/* Floating Particles */}
         <div className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
         <div className="absolute top-40 right-32 w-1 h-1 bg-purple-400 rounded-full animate-ping"></div>
@@ -37,7 +37,7 @@ function App() {
       </div>
 
       {/* Navigation */}
-      <Navbar 
+      <Navbar
         className="relative z-50 backdrop-blur-sm bg-black/20 border-b border-gray-800/50"
         maxWidth="full"
         height="5rem"
@@ -56,8 +56,8 @@ function App() {
         </NavbarBrand>
         <NavbarContent className="hidden md:flex gap-8" justify="end">
           <NavbarItem>
-            <Link 
-              href="#services" 
+            <Link
+              href="#services"
               className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium"
               onClick={(e) => {
                 e.preventDefault();
@@ -68,8 +68,8 @@ function App() {
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link 
-              href="#why-choose-us" 
+            <Link
+              href="#why-choose-us"
               className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium"
               onClick={(e) => {
                 e.preventDefault();
@@ -80,8 +80,8 @@ function App() {
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link 
-              href="#process" 
+            <Link
+              href="#process"
               className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium"
               onClick={(e) => {
                 e.preventDefault();
@@ -92,8 +92,8 @@ function App() {
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link 
-              href="#privacy" 
+            <Link
+              href="#privacy"
               className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium"
               onClick={(e) => {
                 e.preventDefault();
@@ -104,8 +104,8 @@ function App() {
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link 
-              href="#faq" 
+            <Link
+              href="#faq"
               className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium"
               onClick={(e) => {
                 e.preventDefault();
@@ -116,8 +116,8 @@ function App() {
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link 
-              href="#contact" 
+            <Link
+              href="#contact"
               className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium"
               onClick={(e) => {
                 e.preventDefault();
@@ -139,7 +139,7 @@ function App() {
               <span className="text-gray-300 text-sm font-medium">Anonymous • Encrypted • Secure</span>
             </div>
           </div>
-          
+
           <h1 className="text-6xl md:text-8xl font-black mb-8 leading-tight">
             <span className="block bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-pulse">
               ALL-IN-ONE
@@ -151,22 +151,22 @@ function App() {
               </span>
             </span>
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-            <span className="text-cyan-400 font-semibold">Privacy-first</span> solutions for the decentralized future. 
-            From <span className="text-purple-400 font-semibold">whitepapers</span> to <span className="text-pink-400 font-semibold">smart contracts</span>, 
+            <span className="text-cyan-400 font-semibold">Privacy-first</span> solutions for the decentralized future.
+            From <span className="text-purple-400 font-semibold">whitepapers</span> to <span className="text-pink-400 font-semibold">smart contracts</span>,
             we deliver comprehensive crypto services with <span className="text-green-400 font-semibold">absolute discretion</span>.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <Button 
+            <Button
               size="lg"
               className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25"
               radius="lg"
             >
               Get Started Now
             </Button>
-            <Button 
+            <Button
               size="lg"
               variant="bordered"
               className="px-10 py-5 border-2 border-gray-600 text-gray-300 font-bold hover:border-cyan-400 hover:text-cyan-400 hover:shadow-lg hover:shadow-cyan-400/25 transition-all duration-300 backdrop-blur-sm bg-gray-800/20"
@@ -208,10 +208,10 @@ function App() {
               </span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Comprehensive crypto solutions delivered with enterprise-grade security and professional excellence
+50              Professional crypto solutions delivered with high-quality security and technical excellence
             </p>
           </div>
-          
+
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Writing Services */}
             <Card className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
@@ -325,10 +325,10 @@ function App() {
               </span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Trusted by leading crypto projects worldwide for our expertise, discretion, and results
+              Trusted by crypto projects and startups for our expertise, discretion, and results
             </p>
           </div>
-          
+
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
@@ -339,10 +339,10 @@ function App() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-2">Proven Track Record</h3>
-                  <p className="text-gray-400 text-lg">Successfully delivered 500+ crypto projects with 99.8% client satisfaction rate</p>
+                  <p className="text-gray-400 text-lg">Successfully delivered 50+ crypto projects with high client satisfaction</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -354,7 +354,7 @@ function App() {
                   <p className="text-gray-400 text-lg">Average project completion 40% faster than industry standard</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -367,18 +367,18 @@ function App() {
                 </div>
               </div>
             </div>
-            
+
             <div className="grid grid-cols-2 gap-6">
               <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50">
                 <CardBody className="text-center p-8">
-                  <div className="text-4xl font-black text-green-400 mb-2">$2.5B+</div>
+                  <div className="text-4xl font-black text-green-400 mb-2">$500K+</div>
                   <div className="text-gray-400 text-sm uppercase tracking-wider">Total Value Secured</div>
                 </CardBody>
               </Card>
               <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50">
                 <CardBody className="text-center p-8">
-                  <div className="text-4xl font-black text-purple-400 mb-2">150+</div>
-                  <div className="text-gray-400 text-sm uppercase tracking-wider">Enterprise Clients</div>
+                  <div className="text-4xl font-black text-purple-400 mb-2">25+</div>
+                  <div className="text-gray-400 text-sm uppercase tracking-wider">Satisfied Clients</div>
                 </CardBody>
               </Card>
               <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50">
@@ -411,7 +411,7 @@ function App() {
               A streamlined, secure workflow designed for maximum privacy and efficiency
             </p>
           </div>
-          
+
           <div className="grid lg:grid-cols-4 gap-8">
             <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
               <CardHeader className="pb-0">
@@ -424,7 +424,7 @@ function App() {
                 <p className="text-gray-400">Reach out through your preferred encrypted channel. No personal information required.</p>
               </CardBody>
             </Card>
-            
+
             <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300">
               <CardHeader className="pb-0">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-4">
@@ -436,7 +436,7 @@ function App() {
                 <p className="text-gray-400">Discuss your project requirements through end-to-end encrypted communications.</p>
               </CardBody>
             </Card>
-            
+
             <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 hover:border-green-500/50 transition-all duration-300">
               <CardHeader className="pb-0">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mb-4">
@@ -448,7 +448,7 @@ function App() {
                 <p className="text-gray-400">Expert execution with regular encrypted updates and milestone deliveries.</p>
               </CardBody>
             </Card>
-            
+
             <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 hover:border-yellow-500/50 transition-all duration-300">
               <CardHeader className="pb-0">
                 <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mb-4">
@@ -473,10 +473,10 @@ function App() {
             </span>
           </h2>
           <p className="text-xl text-gray-300 mb-16 max-w-4xl mx-auto leading-relaxed">
-            Your privacy is our <span className="text-green-400 font-semibold">absolute priority</span>. All communications are encrypted, 
+            Your privacy is our <span className="text-green-400 font-semibold">absolute priority</span>. All communications are encrypted,
             projects are handled with complete discretion, and we <span className="text-cyan-400 font-semibold">never store sensitive information</span>.
           </p>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="group bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm border border-gray-700/50 hover:border-green-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
               <CardBody className="p-8 text-center">
@@ -489,7 +489,7 @@ function App() {
                 <p className="text-gray-400 text-lg leading-relaxed">All communications secured with AES-256 encryption and RSA-4096 key exchange</p>
               </CardBody>
             </Card>
-            
+
             <Card className="group bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm border border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
               <CardBody className="p-8 text-center">
                 <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -501,7 +501,7 @@ function App() {
                 <p className="text-gray-400 text-lg leading-relaxed">Work with us without revealing your identity or personal information</p>
               </CardBody>
             </Card>
-            
+
             <Card className="group bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
               <CardBody className="p-8 text-center">
                 <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -527,10 +527,10 @@ function App() {
               </span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Enterprise-grade security protocols and compliance standards for the most demanding crypto projects
+              Professional security protocols and compliance standards for crypto projects
             </p>
           </div>
-          
+
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50">
@@ -548,7 +548,7 @@ function App() {
                   </div>
                 </CardBody>
               </Card>
-              
+
               <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50">
                 <CardBody className="p-6">
                   <div className="flex items-center space-x-4">
@@ -564,7 +564,7 @@ function App() {
                   </div>
                 </CardBody>
               </Card>
-              
+
               <Card className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50">
                 <CardBody className="p-6">
                   <div className="flex items-center space-x-4">
@@ -581,7 +581,7 @@ function App() {
                 </CardBody>
               </Card>
             </div>
-            
+
             <div className="text-center">
               <div className="relative">
                 <div className="w-64 h-64 bg-gradient-to-r from-red-500/20 to-pink-500/20 rounded-full mx-auto mb-8 flex items-center justify-center">
@@ -616,11 +616,11 @@ function App() {
               Everything you need to know about our crypto services
             </p>
           </div>
-          
+
           <Accordion variant="splitted" className="space-y-4">
-            <AccordionItem 
-              key="payment-methods" 
-              aria-label="Payment Methods" 
+            <AccordionItem
+              key="payment-methods"
+              aria-label="Payment Methods"
               title="What payment methods do you accept?"
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl"
             >
@@ -646,9 +646,9 @@ function App() {
               </div>
             </AccordionItem>
 
-            <AccordionItem 
-              key="privacy-guarantee" 
-              aria-label="Privacy Guarantee" 
+            <AccordionItem
+              key="privacy-guarantee"
+              aria-label="Privacy Guarantee"
               title="How do you guarantee my privacy?"
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl"
             >
@@ -665,9 +665,9 @@ function App() {
               </div>
             </AccordionItem>
 
-            <AccordionItem 
-              key="project-timeline" 
-              aria-label="Project Timeline" 
+            <AccordionItem
+              key="project-timeline"
+              aria-label="Project Timeline"
               title="What are typical project timelines?"
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl"
             >
@@ -686,9 +686,9 @@ function App() {
               </div>
             </AccordionItem>
 
-            <AccordionItem 
-              key="pricing-structure" 
-              aria-label="Pricing Structure" 
+            <AccordionItem
+              key="pricing-structure"
+              aria-label="Pricing Structure"
               title="How is pricing determined?"
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl"
             >
@@ -707,9 +707,9 @@ function App() {
               </div>
             </AccordionItem>
 
-            <AccordionItem 
-              key="technical-expertise" 
-              aria-label="Technical Expertise" 
+            <AccordionItem
+              key="technical-expertise"
+              aria-label="Technical Expertise"
               title="What blockchain technologies do you work with?"
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl"
             >
@@ -726,9 +726,9 @@ function App() {
               </div>
             </AccordionItem>
 
-            <AccordionItem 
-              key="communication-channels" 
-              aria-label="Communication Channels" 
+            <AccordionItem
+              key="communication-channels"
+              aria-label="Communication Channels"
               title="How do we communicate during the project?"
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl"
             >
@@ -748,9 +748,9 @@ function App() {
               </div>
             </AccordionItem>
 
-            <AccordionItem 
-              key="quality-assurance" 
-              aria-label="Quality Assurance" 
+            <AccordionItem
+              key="quality-assurance"
+              aria-label="Quality Assurance"
               title="What quality assurance do you provide?"
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl"
             >
@@ -770,86 +770,6 @@ function App() {
         </div>
       </section>
 
-||||||| ef607bd
-=======
-      {/* Features Section */}
-      <section className="relative z-10 px-6 py-32 bg-gradient-to-b from-gray-900/50 to-transparent">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-black mb-6">
-              <span className="bg-gradient-to-r from-green-400 to-cyan-500 bg-clip-text text-transparent">
-                WHY CHOOSE US
-              </span>
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Industry-leading expertise combined with uncompromising privacy standards
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="flex items-start space-x-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-3">Lightning Fast Delivery</h3>
-                  <p className="text-gray-400 leading-relaxed">Efficient development cycles with enterprise-grade quality. Timeline varies by project complexity and scope.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-3">Battle-Tested Security</h3>
-                  <p className="text-gray-400 leading-relaxed">All smart contracts undergo comprehensive security audits and testing. Strong security track record with multiple successful deployments.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-3">Expert Team</h3>
-                  <p className="text-gray-400 leading-relaxed">Experienced developers with deep expertise in blockchain technologies and decentralized finance.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="relative">
-              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl border border-gray-700/50 p-8">
-                <div className="grid grid-cols-2 gap-6 text-center">
-                  <div>
-                    <div className="text-4xl font-black text-green-400 mb-2">$5M+</div>
-                    <div className="text-gray-400 text-sm uppercase tracking-wider">Total Value Secured</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-black text-cyan-400 mb-2">99%</div>
-                    <div className="text-gray-400 text-sm uppercase tracking-wider">Uptime Target</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-black text-purple-400 mb-2">48h</div>
-                    <div className="text-gray-400 text-sm uppercase tracking-wider">Response Time</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-black text-pink-400 mb-2">95%</div>
-                    <div className="text-gray-400 text-sm uppercase tracking-wider">Client Satisfaction</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Testimonials Section */}
       <section className="relative z-10 px-6 py-32 bg-gradient-to-b from-transparent to-gray-900/30">
@@ -861,10 +781,10 @@ function App() {
               </span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Trusted by leading DeFi protocols and crypto innovators worldwide
+              Trusted by DeFi protocols and crypto innovators
             </p>
           </div>
-          
+
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="group relative p-8 bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-pink-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/20">
               <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
@@ -888,7 +808,7 @@ function App() {
                 </div>
               </div>
             </div>
-            
+
             <div className="group relative p-8 bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
               <div className="relative z-10">
@@ -911,7 +831,7 @@ function App() {
                 </div>
               </div>
             </div>
-            
+
             <div className="group relative p-8 bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-green-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
               <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
               <div className="relative z-10">
@@ -948,10 +868,10 @@ function App() {
               </span>
             </h2>
             <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Get a <span className="text-cyan-400 font-semibold">confidential quote</span> for your crypto project. 
+              Get a <span className="text-cyan-400 font-semibold">confidential quote</span> for your crypto project.
               <span className="text-green-400 font-semibold">No personal information required</span>.
             </p>
-            
+
             {/* Privacy Features */}
             <div className="grid md:grid-cols-3 gap-6 mb-16">
               <div className="group flex items-center justify-center space-x-3 p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-green-500/50 transition-all duration-300 hover:scale-105">
@@ -983,29 +903,29 @@ function App() {
                 <label className="block text-lg font-semibold text-gray-300 mb-6">
                   Service Required *
                 </label>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <Card className="group bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-cyan-500/50 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20">
-                    <CardBody className="p-6 flex items-center">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <Card className="group bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-cyan-500/50 cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/20">
+                    <CardBody className="p-6 flex items-center min-h-[80px]">
                       <Checkbox className="mr-4" color="primary" />
-                      <span className="text-gray-300 font-medium group-hover:text-cyan-400 transition-colors duration-300">Content Writing (Whitepapers, Announcements)</span>
+                      <span className="text-gray-300 font-medium group-hover:text-cyan-400 transition-colors duration-300 text-base">Content Writing (Whitepapers, Announcements)</span>
                     </CardBody>
                   </Card>
-                  <Card className="group bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-purple-500/50 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20">
-                    <CardBody className="p-6 flex items-center">
+                  <Card className="group bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-purple-500/50 cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-500/20">
+                    <CardBody className="p-6 flex items-center min-h-[80px]">
                       <Checkbox className="mr-4" color="secondary" />
-                      <span className="text-gray-300 font-medium group-hover:text-purple-400 transition-colors duration-300">Smart Contract Development</span>
+                      <span className="text-gray-300 font-medium group-hover:text-purple-400 transition-colors duration-300 text-base">Smart Contract Development</span>
                     </CardBody>
                   </Card>
-                  <Card className="group bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-green-500/50 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20">
-                    <CardBody className="p-6 flex items-center">
+                  <Card className="group bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-green-500/50 cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-green-500/20">
+                    <CardBody className="p-6 flex items-center min-h-[80px]">
                       <Checkbox className="mr-4" color="success" />
-                      <span className="text-gray-300 font-medium group-hover:text-green-400 transition-colors duration-300">DApp Development</span>
+                      <span className="text-gray-300 font-medium group-hover:text-green-400 transition-colors duration-300 text-base">DApp Development</span>
                     </CardBody>
                   </Card>
-                  <Card className="group bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-pink-500/50 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-pink-500/20">
-                    <CardBody className="p-6 flex items-center">
+                  <Card className="group bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-pink-500/50 cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-pink-500/20">
+                    <CardBody className="p-6 flex items-center min-h-[80px]">
                       <Checkbox className="mr-4" color="warning" />
-                      <span className="text-gray-300 font-medium group-hover:text-pink-400 transition-colors duration-300">Social Media & Marketing</span>
+                      <span className="text-gray-300 font-medium group-hover:text-pink-400 transition-colors duration-300 text-base">Social Media & Marketing</span>
                     </CardBody>
                   </Card>
                 </div>
@@ -1013,50 +933,54 @@ function App() {
 
               {/* Project Description */}
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-3">
+                <label className="block text-lg font-semibold text-gray-300 mb-4">
                   Project Description *
                 </label>
-                <Textarea 
+                <Textarea
                   placeholder="Describe your project requirements, timeline, and any specific needs. Be as detailed as possible to receive an accurate quote."
-                  rows={4}
+                  rows={5}
                   className="w-full"
                   classNames={{
-                    input: "bg-gray-700/50 border border-gray-600 text-gray-300",
-                    inputWrapper: "bg-gray-700/50 border border-gray-600 hover:border-cyan-500 focus-within:border-cyan-500"
+                    input: "bg-gray-700/50 border border-gray-600 text-gray-300 text-base leading-relaxed",
+                    inputWrapper: "bg-gray-700/50 border border-gray-600 hover:border-cyan-500 focus-within:border-cyan-500 min-h-[140px] transition-colors duration-300"
                   }}
                 />
               </div>
 
               {/* Budget Range */}
               <div>
+                <label className="block text-lg font-semibold text-gray-300 mb-4">
+                  Estimated Budget Range
+                </label>
                 <Select
-                  label="Estimated Budget Range"
                   placeholder="Select budget range (optional)"
                   className="w-full"
                   classNames={{
-                    trigger: "bg-gray-700/50 border-gray-600 text-gray-300 hover:bg-gray-600/50",
+                    trigger: "bg-gray-700/50 border-gray-600 text-gray-300 hover:bg-gray-600/50 min-h-[48px] transition-colors duration-300",
                     label: "text-gray-300 font-medium",
                     value: "text-gray-300",
                     popoverContent: "bg-gray-800 border-gray-600",
                   }}
                 >
-                  <SelectItem key="under-5k" className="text-gray-300">Under $5,000</SelectItem>
+                  <SelectItem key="under-2k" className="text-gray-300">Under $2,000</SelectItem>
+                  <SelectItem key="2k-5k" className="text-gray-300">$2,000 - $5,000</SelectItem>
                   <SelectItem key="5k-15k" className="text-gray-300">$5,000 - $15,000</SelectItem>
-                  <SelectItem key="15k-50k" className="text-gray-300">$15,000 - $50,000</SelectItem>
-                  <SelectItem key="50k-100k" className="text-gray-300">$50,000 - $100,000</SelectItem>
-                  <SelectItem key="over-100k" className="text-gray-300">Over $100,000</SelectItem>
+                  <SelectItem key="15k-30k" className="text-gray-300">$15,000 - $30,000</SelectItem>
+                  <SelectItem key="over-30k" className="text-gray-300">Over $30,000</SelectItem>
                   <SelectItem key="discuss" className="text-gray-300">Prefer to discuss</SelectItem>
                 </Select>
               </div>
 
               {/* Timeline */}
               <div>
+                <label className="block text-lg font-semibold text-gray-300 mb-4">
+                  Project Timeline
+                </label>
                 <Select
-                  label="Project Timeline"
                   placeholder="Select timeline (optional)"
                   className="w-full"
                   classNames={{
-                    trigger: "bg-gray-700/50 border-gray-600 text-gray-300 hover:bg-gray-600/50",
+                    trigger: "bg-gray-700/50 border-gray-600 text-gray-300 hover:bg-gray-600/50 min-h-[48px] transition-colors duration-300",
                     label: "text-gray-300 font-medium",
                     value: "text-gray-300",
                     popoverContent: "bg-gray-800 border-gray-600",
@@ -1071,10 +995,10 @@ function App() {
 
               {/* Anonymous Contact Method */}
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-3">
+                <label className="block text-lg font-semibold text-gray-300 mb-4">
                   Preferred Anonymous Contact Method *
                 </label>
-                <RadioGroup className="space-y-3">
+                <RadioGroup className="space-y-4 mb-4">
                   <Radio value="telegram" className="text-gray-300">
                     Telegram (provide username)
                   </Radio>
@@ -1088,13 +1012,13 @@ function App() {
                     Discord (provide username)
                   </Radio>
                 </RadioGroup>
-                <Textarea 
+                <Textarea
                   placeholder="Enter your contact details (username/email/number)"
-                  rows={1}
-                  className="w-full mt-3"
+                  rows={2}
+                  className="w-full"
                   classNames={{
-                    input: "bg-gray-700/50 border border-gray-600 text-gray-300",
-                    inputWrapper: "bg-gray-700/50 border border-gray-600 hover:border-cyan-500 focus-within:border-cyan-500"
+                    input: "bg-gray-700/50 border border-gray-600 text-gray-300 text-base",
+                    inputWrapper: "bg-gray-700/50 border border-gray-600 hover:border-cyan-500 focus-within:border-cyan-500 min-h-[60px] transition-colors duration-300"
                   }}
                 />
               </div>
@@ -1109,8 +1033,8 @@ function App() {
                     <div>
                       <h4 className="text-lg font-semibold text-white mb-2">Privacy Guarantee</h4>
                       <p className="text-gray-300 text-sm leading-relaxed">
-                        Your submission is encrypted end-to-end and automatically deleted after 24 hours. 
-                        We never store personal information, IP addresses, or metadata. All project discussions 
+                        Your submission is encrypted end-to-end and automatically deleted after 24 hours.
+                        We never store personal information, IP addresses, or metadata. All project discussions
                         happen through your chosen anonymous channel with AES-256 encryption.
                       </p>
                     </div>

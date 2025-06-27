@@ -620,15 +620,15 @@ function App() {
                 <ul className="space-y-2 ml-4">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
-                    <strong>Ethereum Network:</strong> ETH, USDC, USDT, DAI (stablecoins preferred)
+                    <strong>Ethereum Network:</strong>&nbsp;ETH, USDC, USDT, DAI (stablecoins preferred)
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-orange-400 rounded-full mr-3"></div>
-                    <strong>Bitcoin Network:</strong> BTC (native Bitcoin transactions)
+                    <strong>Bitcoin Network:</strong>&nbsp;BTC (native Bitcoin transactions)
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
-                    <strong>Monero Network:</strong> XMR (for maximum privacy)
+                    <strong>Monero Network:</strong>&nbsp;XMR (for maximum privacy)
                   </li>
                 </ul>
                 <p className="text-sm text-gray-400 mt-4">

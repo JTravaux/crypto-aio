@@ -179,7 +179,7 @@ function App() {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-black text-cyan-400 mb-2">100+</div>
+              <div className="text-3xl md:text-4xl font-black text-cyan-400 mb-2">50+</div>
               <div className="text-gray-400 text-sm uppercase tracking-wider">Projects Delivered</div>
             </div>
             <div className="text-center">

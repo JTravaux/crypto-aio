@@ -58,20 +58,20 @@ const ContactForm = () => {
     <form
       ref={formRef}
       onSubmit={handleSubmit}
-      className="space-y-10"
+      className="space-y-8 sm:space-y-10"
     >
       {/* Project Details Section */}
       <div>
-        <h3 className="text-2xl font-bold text-cyan-400 mb-2 tracking-tight">Project Details</h3>
-        <hr className="border-cyan-700/30 mb-6" />
+        <h3 className="text-xl sm:text-2xl font-bold text-cyan-400 mb-2 tracking-tight">Project Details</h3>
+        <hr className="border-cyan-700/30 mb-4 sm:mb-6" />
         {/* Service Type */}
-        <div className="mb-8">
-          <label className="block text-lg font-semibold text-gray-300 mb-2">
+        <div className="mb-6 sm:mb-8">
+          <label className="block text-base sm:text-lg font-semibold text-gray-300 mb-2">
             Service Required *
           </label>
-          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 sm:gap-4">
             <label className="group cursor-pointer">
-              <div className="bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/20 group-hover:border-cyan-500/70 rounded-2xl p-1 flex flex-row items-center gap-2 h-16">
+              <div className="bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/20 group-hover:border-cyan-500/70 rounded-xl sm:rounded-2xl p-1 flex flex-row items-center gap-2 h-14 sm:h-16">
                 <Checkbox
                   className="ml-2"
                   color="primary"
@@ -83,12 +83,12 @@ const ContactForm = () => {
                   }}
                 />
                 <div className="flex-1">
-                  <span className="text-gray-300 font-medium group-hover:text-cyan-400 transition-colors duration-300 text-base">Content Solutions</span>
+                  <span className="text-gray-300 font-medium group-hover:text-cyan-400 transition-colors duration-300 text-sm sm:text-base">Content Solutions</span>
                 </div>
               </div>
             </label>
             <label className="group cursor-pointer">
-              <div className="bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-500/20 group-hover:border-purple-500/70 rounded-2xl p-1 flex flex-row items-center gap-2 h-16">
+              <div className="bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-500/20 group-hover:border-purple-500/70 rounded-xl sm:rounded-2xl p-1 flex flex-row items-center gap-2 h-14 sm:h-16">
                 <Checkbox
                   className="ml-2"
                   color="secondary"
@@ -100,12 +100,12 @@ const ContactForm = () => {
                   }}
                 />
                 <div className="flex-1">
-                  <span className="text-gray-300 font-medium group-hover:text-purple-400 transition-colors duration-300 text-base">Development Solutions</span>
+                  <span className="text-gray-300 font-medium group-hover:text-purple-400 transition-colors duration-300 text-sm sm:text-base">Development Solutions</span>
                 </div>
               </div>
             </label>
             <label className="group cursor-pointer">
-              <div className="bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-green-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-green-500/20 group-hover:border-green-500/70 rounded-2xl p-1 flex flex-row items-center gap-2 h-16">
+              <div className="bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm border border-gray-600/50 hover:border-green-500/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-green-500/20 group-hover:border-green-500/70 rounded-xl sm:rounded-2xl p-1 flex flex-row items-center gap-2 h-14 sm:h-16">
                 <Checkbox
                   className="ml-2"
                   color="success"
@@ -117,15 +117,15 @@ const ContactForm = () => {
                   }}
                 />
                 <div className="flex-1">
-                  <span className="text-gray-300 font-medium group-hover:text-green-400 transition-colors duration-300 text-base">Privacy Solutions</span>
+                  <span className="text-gray-300 font-medium group-hover:text-green-400 transition-colors duration-300 text-sm sm:text-base">Privacy Solutions</span>
                 </div>
               </div>
             </label>
           </div>
         </div>
         {/* Project Description */}
-        <div className="mb-8">
-          <label className="block text-lg font-semibold text-gray-300 mb-2">
+        <div className="mb-6 sm:mb-8">
+          <label className="block text-base sm:text-lg font-semibold text-gray-300 mb-2">
             Project Description *
           </label>
           <Textarea
@@ -133,12 +133,12 @@ const ContactForm = () => {
             value={projectDescription}
             onChange={e => setProjectDescription(e.target.value)}
             placeholder="Describe your project requirements, timeline, and any specific needs. Be as detailed as possible to receive an accurate quote."
-            rows={5}
+            rows={4}
             className="w-full"
             classNames={{
               base: "w-full",
-              input: "bg-transparent text-gray-300 text-base leading-normal placeholder:text-gray-500 py-2",
-              inputWrapper: "bg-gray-700/50 border border-gray-600 hover:border-cyan-500 focus-within:border-cyan-500 focus:ring-2 focus:ring-cyan-500/50 min-h-[100px] transition-colors duration-300 shadow-none"
+              input: "bg-transparent text-gray-300 text-sm sm:text-base leading-normal placeholder:text-gray-500 py-2",
+              inputWrapper: "bg-gray-700/50 border border-gray-600 hover:border-cyan-500 focus-within:border-cyan-500 focus:ring-2 focus:ring-cyan-500/50 min-h-[80px] sm:min-h-[100px] transition-colors duration-300 shadow-none"
             }}
           />
         </div>
@@ -146,11 +146,11 @@ const ContactForm = () => {
 
       {/* Budget & Timeline Section */}
       <div>
-        <h3 className="text-2xl font-bold text-purple-400 mb-2 tracking-tight">Budget & Timeline</h3>
-        <hr className="border-purple-700/30 mb-6" />
+        <h3 className="text-xl sm:text-2xl font-bold text-purple-400 mb-2 tracking-tight">Budget & Timeline</h3>
+        <hr className="border-purple-700/30 mb-4 sm:mb-6" />
         {/* Budget Range */}
-        <div className="mb-8">
-          <label className="block text-lg font-semibold text-gray-300 mb-2">
+        <div className="mb-6 sm:mb-8">
+          <label className="block text-base sm:text-lg font-semibold text-gray-300 mb-2">
             Estimated Budget Range *
           </label>
           <Select
@@ -164,23 +164,23 @@ const ContactForm = () => {
             placeholder="Select budget range"
             className="w-full"
             classNames={{
-              trigger: "bg-gray-700/50 border-gray-600 text-gray-300 hover:bg-gray-600/50 min-h-[48px] transition-colors duration-300 focus:ring-2 focus:ring-purple-500/50",
-              label: "text-gray-300 font-medium",
-              value: "text-gray-300",
+              trigger: "bg-gray-700/50 border-gray-600 text-gray-300 hover:bg-gray-600/50 min-h-[44px] sm:min-h-[48px] transition-colors duration-300 focus:ring-2 focus:ring-purple-500/50",
+              label: "text-gray-300 font-medium text-sm sm:text-base",
+              value: "text-gray-300 text-sm sm:text-base",
               popoverContent: "bg-gray-800 border-gray-600",
             }}
           >
-            <SelectItem key="under-2k" className="text-gray-300">Under $2,000</SelectItem>
-            <SelectItem key="2k-5k" className="text-gray-300">$2,000 - $5,000</SelectItem>
-            <SelectItem key="5k-15k" className="text-gray-300">$5,000 - $15,000</SelectItem>
-            <SelectItem key="15k-30k" className="text-gray-300">$15,000 - $30,000</SelectItem>
-            <SelectItem key="over-30k" className="text-gray-300">Over $30,000</SelectItem>
-            <SelectItem key="discuss" className="text-gray-300">Prefer to discuss</SelectItem>
+            <SelectItem key="under-2k" className="text-gray-300 text-sm sm:text-base">Under $2,000</SelectItem>
+            <SelectItem key="2k-5k" className="text-gray-300 text-sm sm:text-base">$2,000 - $5,000</SelectItem>
+            <SelectItem key="5k-15k" className="text-gray-300 text-sm sm:text-base">$5,000 - $15,000</SelectItem>
+            <SelectItem key="15k-30k" className="text-gray-300 text-sm sm:text-base">$15,000 - $30,000</SelectItem>
+            <SelectItem key="over-30k" className="text-gray-300 text-sm sm:text-base">Over $30,000</SelectItem>
+            <SelectItem key="discuss" className="text-gray-300 text-sm sm:text-base">Prefer to discuss</SelectItem>
           </Select>
         </div>
         {/* Timeline */}
-        <div className="mb-8">
-          <label className="block text-lg font-semibold text-gray-300 mb-2">
+        <div className="mb-6 sm:mb-8">
+          <label className="block text-base sm:text-lg font-semibold text-gray-300 mb-2">
             Project Timeline *
           </label>
           <Select
@@ -194,49 +194,49 @@ const ContactForm = () => {
             placeholder="Select timeline"
             className="w-full"
             classNames={{
-              trigger: "bg-gray-700/50 border-gray-600 text-gray-300 hover:bg-gray-600/50 min-h-[48px] transition-colors duration-300 focus:ring-2 focus:ring-purple-500/50",
-              label: "text-gray-300 font-medium",
-              value: "text-gray-300",
+              trigger: "bg-gray-700/50 border-gray-600 text-gray-300 hover:bg-gray-600/50 min-h-[44px] sm:min-h-[48px] transition-colors duration-300 focus:ring-2 focus:ring-purple-500/50",
+              label: "text-gray-300 font-medium text-sm sm:text-base",
+              value: "text-gray-300 text-sm sm:text-base",
               popoverContent: "bg-gray-800 border-gray-600",
             }}
           >
-            <SelectItem key="urgent" className="text-gray-300">Urgent (1-2 weeks)</SelectItem>
-            <SelectItem key="fast" className="text-gray-300">Fast (2-4 weeks)</SelectItem>
-            <SelectItem key="standard" className="text-gray-300">Standard (1-2 months)</SelectItem>
-            <SelectItem key="flexible" className="text-gray-300">Flexible (2+ months)</SelectItem>
+            <SelectItem key="urgent" className="text-gray-300 text-sm sm:text-base">Urgent (1-2 weeks)</SelectItem>
+            <SelectItem key="fast" className="text-gray-300 text-sm sm:text-base">Fast (2-4 weeks)</SelectItem>
+            <SelectItem key="standard" className="text-gray-300 text-sm sm:text-base">Standard (1-2 months)</SelectItem>
+            <SelectItem key="flexible" className="text-gray-300 text-sm sm:text-base">Flexible (2+ months)</SelectItem>
           </Select>
         </div>
       </div>
 
       {/* Contact Preferences Section */}
       <div>
-        <h3 className="text-2xl font-bold text-green-400 mb-2 tracking-tight">Contact Preferences</h3>
-        <hr className="border-green-700/30 mb-6" />
+        <h3 className="text-xl sm:text-2xl font-bold text-green-400 mb-2 tracking-tight">Contact Preferences</h3>
+        <hr className="border-green-700/30 mb-4 sm:mb-6" />
         {/* Anonymous Contact Method */}
-        <div className="mb-8">
-          <label className="block text-lg font-semibold text-gray-300 mb-4">
+        <div className="mb-6 sm:mb-8">
+          <label className="block text-base sm:text-lg font-semibold text-gray-300 mb-3 sm:mb-4">
             Preferred Anonymous Contact Method *
           </label>
           <RadioGroup
             name="contact_method"
             value={contactMethod}
             onValueChange={val => setContactMethod(val)}
-            className="space-y-4 mb-4"
+            className="space-y-3 sm:space-y-4 mb-4"
           >
-            <Radio value="signal" className="text-gray-300">Signal (provide number)</Radio>
-            <Radio value="protonmail" className="text-gray-300">ProtonMail (provide email)</Radio>
-            <Radio value="discord" className="text-gray-300">Discord (provide username)</Radio>
-            <Radio value="telegram" className="text-gray-300">Telegram (provide username)</Radio>
+            <Radio value="signal" className="text-gray-300 text-sm sm:text-base">Signal (provide number)</Radio>
+            <Radio value="protonmail" className="text-gray-300 text-sm sm:text-base">ProtonMail (provide email)</Radio>
+            <Radio value="discord" className="text-gray-300 text-sm sm:text-base">Discord (provide username)</Radio>
+            <Radio value="telegram" className="text-gray-300 text-sm sm:text-base">Telegram (provide username)</Radio>
           </RadioGroup>
           <Input
             name="contact_details"
             value={contactDetails}
             onChange={e => setContactDetails(e.target.value)}
             placeholder="Enter your contact details (username/email/number)"
-            className="w-full mt-6"
+            className="w-full mt-4 sm:mt-6"
             classNames={{
               base: "w-full",
-              input: "bg-transparent text-gray-300 text-base placeholder:text-gray-500",
+              input: "bg-transparent text-gray-300 text-sm sm:text-base placeholder:text-gray-500",
               inputWrapper: "bg-gray-700/50 border border-gray-600 hover:border-cyan-500 focus-within:border-cyan-500 focus:ring-2 focus:ring-green-500/50 transition-colors duration-300 shadow-none"
             }}
           />
@@ -244,18 +244,18 @@ const ContactForm = () => {
       </div>
 
       {/* Submit Button Area */}
-      <div className="text-center bg-gradient-to-r from-cyan-900/10 to-purple-900/10 rounded-xl py-8 mt-8 border border-gray-700/40 shadow-inner">
+      <div className="text-center bg-gradient-to-r from-cyan-900/10 to-purple-900/10 rounded-lg sm:rounded-xl py-6 sm:py-8 mt-6 sm:mt-8 border border-gray-700/40 shadow-inner">
         <Button
           type="submit"
           size="lg"
-          className="px-12 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg focus:ring-2 focus:ring-cyan-500/50"
+          className="px-8 sm:px-12 py-3 sm:py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg focus:ring-2 focus:ring-cyan-500/50 text-sm sm:text-base"
           radius="lg"
           isDisabled={!isFormValid || submitting}
           isLoading={submitting}
         >
           Submit Anonymous Quote Request
         </Button>
-        <p className="text-gray-400 text-sm mt-4">
+        <p className="text-gray-400 text-xs sm:text-sm mt-3 sm:mt-4">
           Response within 24 hours • All communications encrypted
         </p>
       </div>
